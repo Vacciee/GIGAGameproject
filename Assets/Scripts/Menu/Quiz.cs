@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Quiz : MonoBehaviour
 {
@@ -20,6 +21,7 @@ public class Quiz : MonoBehaviour
     public void CorrectAnwser()
     {
         answer = 1;
+        SceneManager.LoadScene("Map");
     }
     public void WrongAnwser()
     {
