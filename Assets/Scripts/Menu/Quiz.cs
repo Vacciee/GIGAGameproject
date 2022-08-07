@@ -10,7 +10,7 @@ public class Quiz : MonoBehaviour
     {
         if (answer == 1)
         {
-            gameManager.cargo += 1; // correct anwser adds to cargo in Game Manager.
+            gameManager.cargo += 1; // correct anwser adds to cargo in Game Manager. !! Does not add in the GM atm. !!
             answer = 0;
         }
         if (answer == 0)
@@ -21,7 +21,8 @@ public class Quiz : MonoBehaviour
     public void CorrectAnwser()
     {
         answer = 1;
-        SceneManager.LoadScene("Map");
+        // SceneManager.LoadScene("Map");
+
     }
     public void WrongAnwser()
     {
