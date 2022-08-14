@@ -13,6 +13,7 @@ public class Movement : MonoBehaviour
     private bool moving = false;
 
     private Vector2 movement;
+    public Rigidbody2D rb;
 
     private void Awake()
     {
@@ -26,47 +27,54 @@ public class Movement : MonoBehaviour
 
     void Update()
     {
-        // 3 - Retrieve the mouse position
+
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
             targetPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            moving = true;
-        }
-
-        //4 - Find the relative poistion of the target based upon the current position
-        // Update each frame to account for any movement
-        relativePosition = new Vector2(
+            relativePosition = new Vector2(
             targetPosition.x - gameObject.transform.position.x,
             targetPosition.y - gameObject.transform.position.y);
+            Vector2 mdir = relativePosition.normalized * speed;
+            rb.rotation = 90 - Mathf.Atan2(mdir.x, mdir.y) * Mathf.Rad2Deg;
+            rb.velocity = mdir;
+            rb.angularVelocity = 0;
+        }
+
+
     }
 
-    void FixedUpdate()
+    private void FixedUpdate()
     {
-        // 5 - If you are about to overshoot the target, reduce velocity to that distance
-        //      Else cap the Movement by a maximum speed per direction (x then y)
-        if (speed.x * Time.deltaTime >= Mathf.Abs(relativePosition.x))
+        if ((targetPosition - (Vector2)transform.position).magnitude < 0.5f)
         {
-            movement.x = relativePosition.x;
+            rb.velocity = Vector2.zero;
         }
-        else
-        {
-            movement.x = speed.x * Mathf.Sign(relativePosition.x);
-        }
-        if (speed.y * Time.deltaTime >= Mathf.Abs(relativePosition.y))
-        {
-            movement.y = relativePosition.y;
-        }
-        else
-        {
-            movement.y = speed.y * Mathf.Sign(relativePosition.y);
-        }
-
-        // 6 - Move the game object using the physics engine
-        if (moving)
-        {
-            GetComponent<Rigidbody2D>().velocity = movement;
-
-        }
-
     }
+
+    // void FixedUpdate()
+    // {
+    //     if (speed.x * Time.deltaTime >= Mathf.Abs(relativePosition.x))
+    //     {
+    //         movement.x = relativePosition.x;
+    //     }
+    //     else
+    //     {
+    //         movement.x = speed.x * Mathf.Sign(relativePosition.x);
+    //     }
+    //     if (speed.y * Time.deltaTime >= Mathf.Abs(relativePosition.y))
+    //     {
+    //         movement.y = relativePosition.y;
+    //     }
+    //     else
+    //     {
+    //         movement.y = speed.y * Mathf.Sign(relativePosition.y);
+    //     }
+
+    //     if (moving)
+    //     {
+    //         GetComponent<Rigidbody2D>().velocity = movement;
+
+    //     }
+
+    // }
 }
