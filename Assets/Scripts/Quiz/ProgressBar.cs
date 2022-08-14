@@ -5,12 +5,12 @@ public class ProgressBar : MonoBehaviour
 {
     public Slider slider;
     public int maxProgress = 100;
-    public int currentProgress;
+    public int progress;
 
     void Start()
     {
         // Making sure we have no points to begin with
-        currentProgress = 0;
+        SetMinProgress(0);
     }
 
     void Update()

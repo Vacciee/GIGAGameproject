@@ -11,7 +11,11 @@ public class QuizManager : MonoBehaviour
     private List<TMP_Text> buttonTexts;
     public int currentQuestion;
     private int currentButton;
+    public int answersToComplete = 10; // How many correct answers player needs to give
     public Button correctButton;
+    // private Button wrongButton1;
+    // private Button wrongButton2;
+    // private Button wrongButton3;
     private Button button1;
     private Button button2;
     private Button button3;
@@ -21,9 +25,19 @@ public class QuizManager : MonoBehaviour
     private TMP_Text button3text;
     private TMP_Text button4text;
     private TMP_Text questionText;
+    private GameObject popUpComplete;
+
+    // Getting access to ProgressBar.cs
+    public GameObject panelBar;
+    private ProgressBar pbScript;
 
     void Awake()
     {
+        panelBar = GameObject.Find("PanelBar");
+        pbScript = panelBar.GetComponent<ProgressBar>();
+        // FPS limiter
+        Application.targetFrameRate = 60;
+
         button1 = GameObject.Find("Answer1").GetComponent<Button>();
         button2 = GameObject.Find("Answer2").GetComponent<Button>();
         button3 = GameObject.Find("Answer3").GetComponent<Button>();
@@ -35,6 +49,9 @@ public class QuizManager : MonoBehaviour
         button4text = GameObject.Find("AnswerText4").GetComponent<TMP_Text>();
 
         questionText = GameObject.Find("QuestionText").GetComponent<TMP_Text>();
+
+        popUpComplete = GameObject.Find("PopUpComplete");
+        popUpComplete.SetActive(false);
 
         data = new List<Dictionary<string, object>>();
         // Filling the list with the stuff from file QuizQuestions.csv
@@ -51,6 +68,15 @@ public class QuizManager : MonoBehaviour
         }
         // Getting our first quiz round
         UpdateQuiz();
+    }
+
+    void Start()
+    {
+        // These will check the answer when a button is pressed
+        button1.onClick.AddListener(CheckButton1);
+        button2.onClick.AddListener(CheckButton2);
+        button3.onClick.AddListener(CheckButton3);
+        button4.onClick.AddListener(CheckButton4);
     }
 
     // void Update()
@@ -85,16 +111,19 @@ public class QuizManager : MonoBehaviour
         buttonTexts.RemoveAt(currentButton);
         // Picking a button for 1st wrong answer
         currentButton = UnityEngine.Random.Range(0, buttonsList.Count);
+        // wrongButton1 = buttonsList[currentButton];
         buttonTexts[currentButton].text = data[currentQuestion]["False1"].ToString();
         buttonsList.RemoveAt(currentButton);
         buttonTexts.RemoveAt(currentButton);
         // And for the second
         currentButton = UnityEngine.Random.Range(0, buttonsList.Count);
+        // wrongButton2 = buttonsList[currentButton];
         buttonTexts[currentButton].text = data[currentQuestion]["False2"].ToString();
         buttonsList.RemoveAt(currentButton);
         buttonTexts.RemoveAt(currentButton);
         // And the third
         currentButton = UnityEngine.Random.Range(0, buttonsList.Count);
+        // wrongButton3 = buttonsList[currentButton];
         buttonTexts[currentButton].text = data[currentQuestion]["False3"].ToString();
         buttonsList.RemoveAt(currentButton);
         buttonTexts.RemoveAt(currentButton);
@@ -103,14 +132,76 @@ public class QuizManager : MonoBehaviour
         buttonTexts.Clear();
     }
 
+    void CheckButton1()
+    {
+        if (button1 != correctButton)
+            AnswerWrong();
+        else
+            AnswerCorrect();
+    }
+
+    void CheckButton2()
+    {
+        if (button2 != correctButton)
+            AnswerWrong();
+        else
+            AnswerCorrect();
+    }
+
+    void CheckButton3()
+    {
+        if (button3 != correctButton)
+            AnswerWrong();
+        else
+            AnswerCorrect();
+    }
+
+    void CheckButton4()
+    {
+        if (button4 != correctButton)
+            AnswerWrong();
+        else
+            AnswerCorrect();
+    }
+
     void AnswerCorrect()
     {
-
+        print("Correct!");
+        // Adding progress
+        pbScript.progress += pbScript.maxProgress / answersToComplete;
+        // Updating progressbar
+        pbScript.SetProgress(pbScript.progress);
+        //
+        // If have time put the correct pop up here!
+        //
+        // Checking if we have enough correct answers to end the game
+        if (pbScript.progress >= pbScript.maxProgress)
+        {
+            // Game is ending!
+            // Kill the listeners so answer buttons stop working
+            button1.onClick.RemoveAllListeners();
+            button2.onClick.RemoveAllListeners();
+            button3.onClick.RemoveAllListeners();
+            button4.onClick.RemoveAllListeners();
+            // Pop up the -game complete- pop up
+            popUpComplete.SetActive(true);
+        }
+        else
+        {
+            // We get ready for a new round
+            // First we remove the current question from the pool so it doesnt repeat
+            data.RemoveAt(currentQuestion);
+            UpdateQuiz();
+        }
     }
 
     void AnswerWrong()
     {
-
+        print("Wrong answer!");
+        //
+        // If have time put the wrong pop up here
+        //
+        UpdateQuiz();
     }
 
     void GetNewQuestion()
