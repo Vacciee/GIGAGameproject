@@ -9,13 +9,12 @@ public class QuizManager : MonoBehaviour
     private List<Dictionary<string, object>> data;
     private List<Button> buttonsList;
     private List<TMP_Text> buttonTexts;
+    public float popUpCorrectTimer = 0;
+    public float popUpWrongTimer = 0;
     public int currentQuestion;
     private int currentButton;
     public int answersToComplete = 10; // How many correct answers player needs to give
     public Button correctButton;
-    // private Button wrongButton1;
-    // private Button wrongButton2;
-    // private Button wrongButton3;
     private Button button1;
     private Button button2;
     private Button button3;
@@ -26,6 +25,8 @@ public class QuizManager : MonoBehaviour
     private TMP_Text button4text;
     private TMP_Text questionText;
     private GameObject popUpComplete;
+    private GameObject popUpCorrect;
+    private GameObject popUpWrong;
 
     // Getting access to ProgressBar.cs
     public GameObject panelBar;
@@ -35,8 +36,6 @@ public class QuizManager : MonoBehaviour
     {
         panelBar = GameObject.Find("PanelBar");
         pbScript = panelBar.GetComponent<ProgressBar>();
-        // FPS limiter
-        Application.targetFrameRate = 60;
 
         button1 = GameObject.Find("Answer1").GetComponent<Button>();
         button2 = GameObject.Find("Answer2").GetComponent<Button>();
@@ -51,7 +50,11 @@ public class QuizManager : MonoBehaviour
         questionText = GameObject.Find("QuestionText").GetComponent<TMP_Text>();
 
         popUpComplete = GameObject.Find("PopUpComplete");
+        popUpCorrect = GameObject.Find("PopUpCorrect");
+        popUpWrong = GameObject.Find("PopUpWrong");
         popUpComplete.SetActive(false);
+        popUpCorrect.SetActive(false);
+        popUpWrong.SetActive(false);
 
         data = new List<Dictionary<string, object>>();
         // Filling the list with the stuff from file QuizQuestions.csv
@@ -79,10 +82,24 @@ public class QuizManager : MonoBehaviour
         button4.onClick.AddListener(CheckButton4);
     }
 
-    // void Update()
-    // {
+    void Update()
+    {
+        while (popUpCorrectTimer > 0)
+        {
+            popUpCorrect.SetActive(true);
+            popUpCorrectTimer -= Time.deltaTime;
+        }
+        if (popUpCorrectTimer <= 0)
+            popUpCorrect.SetActive(false);
 
-    // }
+        while (popUpWrongTimer > 0)
+        {
+            popUpWrong.SetActive(true);
+            popUpWrongTimer -= Time.deltaTime;
+        }
+        if (popUpWrongTimer <= 0)
+            popUpWrong.SetActive(false);
+    }
 
     void UpdateQuiz()
     {
@@ -111,19 +128,16 @@ public class QuizManager : MonoBehaviour
         buttonTexts.RemoveAt(currentButton);
         // Picking a button for 1st wrong answer
         currentButton = UnityEngine.Random.Range(0, buttonsList.Count);
-        // wrongButton1 = buttonsList[currentButton];
         buttonTexts[currentButton].text = data[currentQuestion]["False1"].ToString();
         buttonsList.RemoveAt(currentButton);
         buttonTexts.RemoveAt(currentButton);
         // And for the second
         currentButton = UnityEngine.Random.Range(0, buttonsList.Count);
-        // wrongButton2 = buttonsList[currentButton];
         buttonTexts[currentButton].text = data[currentQuestion]["False2"].ToString();
         buttonsList.RemoveAt(currentButton);
         buttonTexts.RemoveAt(currentButton);
         // And the third
         currentButton = UnityEngine.Random.Range(0, buttonsList.Count);
-        // wrongButton3 = buttonsList[currentButton];
         buttonTexts[currentButton].text = data[currentQuestion]["False3"].ToString();
         buttonsList.RemoveAt(currentButton);
         buttonTexts.RemoveAt(currentButton);
@@ -171,9 +185,7 @@ public class QuizManager : MonoBehaviour
         pbScript.progress += pbScript.maxProgress / answersToComplete;
         // Updating progressbar
         pbScript.SetProgress(pbScript.progress);
-        //
-        // If have time put the correct pop up here!
-        //
+        PopCorrect();
         // Checking if we have enough correct answers to end the game
         if (pbScript.progress >= pbScript.maxProgress)
         {
@@ -198,9 +210,7 @@ public class QuizManager : MonoBehaviour
     void AnswerWrong()
     {
         print("Wrong answer!");
-        //
-        // If have time put the wrong pop up here
-        //
+        PopWrong();
         UpdateQuiz();
     }
 
@@ -209,4 +219,15 @@ public class QuizManager : MonoBehaviour
         currentQuestion = UnityEngine.Random.Range(0, data.Count);
         print("currentQuestion has been set to question " + currentQuestion + ".");
     }
+
+    void PopCorrect()
+    {
+        popUpCorrectTimer = 30f;
+    }
+
+    void PopWrong()
+    {
+        popUpWrongTimer = 30f;
+    }
+
 }
