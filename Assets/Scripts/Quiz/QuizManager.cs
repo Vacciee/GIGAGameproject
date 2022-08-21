@@ -12,6 +12,7 @@ public class QuizManager : MonoBehaviour
     public float popUpCorrectTimer = 0;
     public float popUpWrongTimer = 0;
     public int currentQuestion;
+    private int newQuestion;
     private int currentButton;
     public int answersToComplete = 10; // How many correct answers player needs to give
     public Button correctButton;
@@ -216,7 +217,16 @@ public class QuizManager : MonoBehaviour
 
     void GetNewQuestion()
     {
-        currentQuestion = UnityEngine.Random.Range(0, data.Count);
+        newQuestion = UnityEngine.Random.Range(0, data.Count);
+        // Making sure the while loop doesnt do weird stuff when there is only one question left
+        if (data.Count > 1)
+        {
+            while (newQuestion == currentQuestion)
+            {
+                newQuestion = UnityEngine.Random.Range(0, data.Count);
+            }
+        }
+        currentQuestion = newQuestion;
         print("currentQuestion has been set to question " + currentQuestion + ".");
     }
 

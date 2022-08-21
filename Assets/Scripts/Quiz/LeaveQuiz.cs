@@ -7,6 +7,6 @@ public class LeaveQuiz : MonoBehaviour
 {
     public void Leave()
     {
-        SceneManager.LoadScene("Map");
+        SceneManager.LoadScene("MiniGame");
     }
 }
