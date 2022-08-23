@@ -16,12 +16,10 @@ public class Load : MonoBehaviour
     public void LoadMenu()
     {
         SceneManager.LoadScene(scenePath);
-        Time.timeScale = 0f; // Pauses
     }
     public void LoadGame()
     {
         SceneManager.LoadScene("Map");
-        Time.timeScale = 1f; // Unpauses
     }
     public void LoadGuide()
     {
