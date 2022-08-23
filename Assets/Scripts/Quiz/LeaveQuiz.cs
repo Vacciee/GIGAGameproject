@@ -5,8 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class LeaveQuiz : MonoBehaviour
 {
+    public string scenePath;
+
     public void Leave()
     {
-        SceneManager.LoadScene("MiniGame");
+        SceneManager.LoadScene(scenePath);
     }
 }

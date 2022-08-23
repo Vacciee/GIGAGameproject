@@ -8,13 +8,14 @@ public class Load : MonoBehaviour
     public GameObject examineMenu;
     public GameObject talkMenu;
     int index;
+    public string scenePath;
     #endregion
 
     #region Scene Loading
     // Main menu Control script
     public void LoadMenu()
     {
-        SceneManager.LoadScene("MainMenu");
+        SceneManager.LoadScene(scenePath);
         Time.timeScale = 0f; // Pauses
     }
     public void LoadGame()
@@ -37,6 +38,7 @@ public class Load : MonoBehaviour
     public void LoadQuiz()
     {
         SceneManager.LoadScene("Quiz");
+        Time.timeScale = 1f;
     }
     public void ExitApplication() // Quit Button
     {
