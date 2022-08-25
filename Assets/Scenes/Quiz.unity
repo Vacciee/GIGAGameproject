@@ -1471,6 +1471,7 @@ GameObject:
   - component: {fileID: 1013400899}
   - component: {fileID: 1013400901}
   - component: {fileID: 1013400900}
+  - component: {fileID: 1013400902}
   m_Layer: 5
   m_Name: PopUpCorrect
   m_TagString: Untagged
@@ -1495,8 +1496,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 161.07, y: 71}
-  m_SizeDelta: {x: 501.1304, y: 497.58}
+  m_AnchoredPosition: {x: 162.21317, y: 68.17199}
+  m_SizeDelta: {x: 503.9738, y: 500.41}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1013400900
 MonoBehaviour:
@@ -1511,8 +1512,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -1536,6 +1537,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1013400898}
   m_CullTransparentMesh: 1
+--- !u!95 &1013400902
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1013400898}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ede84ad79cd5b184fafa2cd9f3680668, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1168436136
 GameObject:
   m_ObjectHideFlags: 0
@@ -1793,11 +1814,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d21054f0600e7246992076b9f433a4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  popUpCorrectTimer: 0
-  popUpWrongTimer: 0
   currentQuestion: 0
   answersToComplete: 10
   correctButton: {fileID: 0}
+  correctAnimator: {fileID: 1013400902}
+  wrongAnimator: {fileID: 1380336283}
   panelBar: {fileID: 0}
 --- !u!1001 &1324361325
 PrefabInstance:
@@ -1931,6 +1952,7 @@ GameObject:
   - component: {fileID: 1380336280}
   - component: {fileID: 1380336282}
   - component: {fileID: 1380336281}
+  - component: {fileID: 1380336283}
   m_Layer: 5
   m_Name: PopUpWrong
   m_TagString: Untagged
@@ -1971,8 +1993,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -1996,6 +2018,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1380336279}
   m_CullTransparentMesh: 1
+--- !u!95 &1380336283
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1380336279}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f19b7a177b03bdb4586a9446647713e9, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1584606994
 GameObject:
   m_ObjectHideFlags: 0
