@@ -178,6 +178,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   examineMenu: {fileID: 0}
   talkMenu: {fileID: 0}
+  scenePath: Options
 --- !u!114 &289676375
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -199,8 +200,8 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 0}
+    m_HighlightedColor: {r: 1, g: 1, b: 1, a: 0.74509805}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
@@ -224,7 +225,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 289676374}
         m_TargetAssemblyTypeName: Load, Assembly-CSharp
-        m_MethodName: LoadOptions
+        m_MethodName: LoadMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -254,8 +255,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: faabeff759456744c926122d920700ad, type: 3}
-  m_Type: 0
+  m_Sprite: {fileID: 10917, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -495,6 +496,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   examineMenu: {fileID: 0}
   talkMenu: {fileID: 0}
+  scenePath: Guide
 --- !u!114 &603102475
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -516,8 +518,8 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 0}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 0.74509805}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
@@ -541,7 +543,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 603102474}
         m_TargetAssemblyTypeName: Load, Assembly-CSharp
-        m_MethodName: LoadGuide
+        m_MethodName: LoadMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -571,8 +573,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: faabeff759456744c926122d920700ad, type: 3}
-  m_Type: 0
+  m_Sprite: {fileID: 10917, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -1700,7 +1702,7 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_HighlightedColor: {r: 0.7322904, g: 0.5253387, b: 0.987, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
@@ -1724,7 +1726,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1604225864}
         m_TargetAssemblyTypeName: Load, Assembly-CSharp
-        m_MethodName: LoadGame
+        m_MethodName: LoadMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1786,6 +1788,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   examineMenu: {fileID: 0}
   talkMenu: {fileID: 0}
+  scenePath: Map
 --- !u!1 &1613289667
 GameObject:
   m_ObjectHideFlags: 0
@@ -1841,6 +1844,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   examineMenu: {fileID: 0}
   talkMenu: {fileID: 0}
+  scenePath: Credits
 --- !u!114 &1613289670
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1862,8 +1866,8 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 0}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 0.74509805}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
@@ -1887,7 +1891,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1613289669}
         m_TargetAssemblyTypeName: Load, Assembly-CSharp
-        m_MethodName: LoadCredits
+        m_MethodName: LoadMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1917,8 +1921,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: faabeff759456744c926122d920700ad, type: 3}
-  m_Type: 0
+  m_Sprite: {fileID: 10917, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4

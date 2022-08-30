@@ -5,10 +5,10 @@ using UnityEngine.SceneManagement;
 public class Load : MonoBehaviour
 {
     #region Variables;
-    public GameObject examineMenu;
-    public GameObject talkMenu;
+    [Tooltip("Used in interractive UI")] public GameObject examineMenu;
+    [Tooltip("Used in interractive UI")] public GameObject talkMenu;
     int index;
-    public string scenePath;
+    [Tooltip("Name the scene name exactly how its written in scene folder!")] public string scenePath;
     #endregion
 
     #region Scene Loading
@@ -17,31 +17,19 @@ public class Load : MonoBehaviour
     {
         SceneManager.LoadScene(scenePath);
     }
-    public void LoadGame()
-    {
-        SceneManager.LoadScene("Map");
-    }
-    public void LoadGuide()
-    {
-        SceneManager.LoadScene("Guide");
-    }
-    public void LoadOptions()
-    {
-        SceneManager.LoadScene("Options");
-    }
-    public void LoadCredits()
-    {
-        SceneManager.LoadScene("Credits");
-    }
+
     public void LoadQuiz()
     {
         SceneManager.LoadScene("Quiz");
         Time.timeScale = 1f;
     }
+
+    /*
     public void ExitApplication() // Quit Button
     {
         Application.Quit();
     }
+    */
 
     public void Examine()
     {
@@ -66,16 +54,6 @@ public class Load : MonoBehaviour
         {
             talkMenu.SetActive(false);
         }
-    }
-
-    #endregion
-
-    #region Levels
-    // Levels
-    public void LoadLevel1()
-    {
-        SceneManager.LoadScene("Level1");
-        Time.timeScale = 1f; // Unpauses
     }
     #endregion
 }
