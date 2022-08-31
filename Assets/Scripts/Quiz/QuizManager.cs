@@ -24,6 +24,7 @@ public class QuizManager : MonoBehaviour
     private TMP_Text button3text;
     private TMP_Text button4text;
     private TMP_Text questionText;
+    private TMP_Text scoreText;
     private GameObject popUpComplete;
     public Animator correctAnimator;
     public Animator wrongAnimator;
@@ -31,11 +32,18 @@ public class QuizManager : MonoBehaviour
     // Getting access to ProgressBar.cs
     public GameObject panelBar;
     private ProgressBar pbScript;
+    public GameObject QuizCanvas;
+    private ScoreScript scoreScript;
+
+    public AudioSource audioSource;
+    public AudioClip correctSound;
+    public AudioClip quizComplete;
 
     void Awake()
     {
         panelBar = GameObject.Find("PanelBar");
         pbScript = panelBar.GetComponent<ProgressBar>();
+        scoreScript = QuizCanvas.GetComponent<ScoreScript>();
 
         button1 = GameObject.Find("Answer1").GetComponent<Button>();
         button2 = GameObject.Find("Answer2").GetComponent<Button>();
@@ -46,6 +54,7 @@ public class QuizManager : MonoBehaviour
         button2text = GameObject.Find("AnswerText2").GetComponent<TMP_Text>();
         button3text = GameObject.Find("AnswerText3").GetComponent<TMP_Text>();
         button4text = GameObject.Find("AnswerText4").GetComponent<TMP_Text>();
+        scoreText = GameObject.Find("Score").GetComponent<TMP_Text>();
 
         questionText = GameObject.Find("QuestionText").GetComponent<TMP_Text>();
 
@@ -165,15 +174,24 @@ public class QuizManager : MonoBehaviour
     void AnswerCorrect()
     {
         print("Correct!");
+        // Updating score
+        scoreScript.AddToScore();
         // Adding progress
         pbScript.progress += pbScript.maxProgress / answersToComplete;
         // Updating progressbar
         pbScript.SetProgress(pbScript.progress);
+        // popping up a check mark pop up
         correctAnimator.SetTrigger("OnCorrectAnswer");
+        // Playing a sound
+        audioSource.PlayOneShot(correctSound);
         // Checking if we have enough correct answers to end the game
         if (pbScript.progress >= pbScript.maxProgress)
         {
             // Game is ending!
+            // Update score text!
+            scoreText.text = (ScoreScript.score).ToString();
+            // Play a sound to celebrate!
+            audioSource.PlayOneShot(quizComplete);
             // Kill the listeners so answer buttons stop working
             button1.onClick.RemoveAllListeners();
             button2.onClick.RemoveAllListeners();
@@ -193,6 +211,7 @@ public class QuizManager : MonoBehaviour
 
     void AnswerWrong()
     {
+        scoreScript.ReducePoints();
         print("Wrong answer!");
         wrongAnimator.SetTrigger("OnWrongAnswer");
         UpdateQuiz();
