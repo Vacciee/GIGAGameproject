@@ -16,6 +16,7 @@ public class Load : MonoBehaviour
     public void LoadMenu()
     {
         SceneManager.LoadScene(scenePath);
+        Time.timeScale = 1f;
     }
 
     public void LoadQuiz()
