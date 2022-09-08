@@ -766,8 +766,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Your score is
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: ceb6ee80cad866e43a7294bdbb5c1480, type: 2}
-  m_sharedMaterial: {fileID: 718386540394839509, guid: ceb6ee80cad866e43a7294bdbb5c1480, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -985,8 +985,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Continue
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: ceb6ee80cad866e43a7294bdbb5c1480, type: 2}
-  m_sharedMaterial: {fileID: 718386540394839509, guid: ceb6ee80cad866e43a7294bdbb5c1480, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2184,8 +2184,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 000000
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: ceb6ee80cad866e43a7294bdbb5c1480, type: 2}
-  m_sharedMaterial: {fileID: 718386540394839509, guid: ceb6ee80cad866e43a7294bdbb5c1480, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2719,8 +2719,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Placeholder text for questions
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: ceb6ee80cad866e43a7294bdbb5c1480, type: 2}
-  m_sharedMaterial: {fileID: 718386540394839509, guid: ceb6ee80cad866e43a7294bdbb5c1480, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3343,8 +3343,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Game paused
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: ceb6ee80cad866e43a7294bdbb5c1480, type: 2}
-  m_sharedMaterial: {fileID: 718386540394839509, guid: ceb6ee80cad866e43a7294bdbb5c1480, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -4647,8 +4647,8 @@ MonoBehaviour:
   m_text: You have answered correctly to enough questions to fully load your space
     truck! Now it's time to fly!
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: ceb6ee80cad866e43a7294bdbb5c1480, type: 2}
-  m_sharedMaterial: {fileID: 718386540394839509, guid: ceb6ee80cad866e43a7294bdbb5c1480, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -4842,9 +4842,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item1: {fileID: 6970586033490106165, guid: 7ea55fe900f40064ab9d11dd18e80b6d, type: 3}
-  item2: {fileID: 6970586033490106165, guid: 7ea55fe900f40064ab9d11dd18e80b6d, type: 3}
-  item3: {fileID: 6970586033490106165, guid: 7ea55fe900f40064ab9d11dd18e80b6d, type: 3}
-  item4: {fileID: 6970586033490106165, guid: 7ea55fe900f40064ab9d11dd18e80b6d, type: 3}
+  item2: {fileID: 3827039282347590802, guid: 406c5b11d372c874c8eea84196ee0dd6, type: 3}
+  item3: {fileID: 1314862241060451389, guid: 861b2ceb695c07f4daa03aa7203ba47e, type: 3}
+  item4: {fileID: 3656378595675263363, guid: f77f1b6c682fe404098d5e927132024b, type: 3}
   maxProgress: 100
   progress: 0
   maxFill: 14

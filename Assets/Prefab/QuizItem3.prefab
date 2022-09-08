@@ -37,8 +37,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1111.4131, y: 522.3009}
-  m_SizeDelta: {x: 113.1737, y: 179.6018}
+  m_AnchoredPosition: {x: -1122.475, y: 532.5054}
+  m_SizeDelta: {x: 151.1238, y: 139.4088}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8422616327098728591
 CanvasRenderer:
@@ -61,14 +61,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.55264926, b: 0.3443396, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 6250669548251677184, guid: 6c6c53c260ea9af4490292dfa7ae3711, type: 3}
+  m_Sprite: {fileID: 21300000, guid: dc71bf8a177a32649bd9e23ae8dd6a33, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -91,9 +91,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0390625, y: -32.563965}
+  m_Offset: {x: 5.6774826, y: -19.17273}
   serializedVersion: 2
-  m_Radius: 50
+  m_Radius: 50.000008
 --- !u!50 &2750608054769141212
 Rigidbody2D:
   serializedVersion: 4
