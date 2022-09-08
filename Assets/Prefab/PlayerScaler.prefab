@@ -402,9 +402,10 @@ GameObject:
   m_Component:
   - component: {fileID: 8882003552576801433}
   - component: {fileID: 8882003552576801432}
-  - component: {fileID: 8882003552576801414}
   - component: {fileID: 8882003552576801412}
   - component: {fileID: 8882003552576801415}
+  - component: {fileID: 5633605218481521606}
+  - component: {fileID: 495062288}
   m_Layer: 0
   m_Name: PlayerScaler
   m_TagString: Player
@@ -481,22 +482,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &8882003552576801414
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8882003552576801435}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a3a11f19ca55c6647867c9b6086fe6ab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: {x: 4, y: 2}
-  targetPosition: {x: 0, y: 0}
-  relativePosition: {x: 0, y: 0}
-  rb: {fileID: 8882003552576801415}
 --- !u!61 &8882003552576801412
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -544,6 +529,33 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &5633605218481521606
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8882003552576801435}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89bf557118d57e241a1730cc1009f1a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 8882003552576801415}
+  speed: 0.03
+--- !u!114 &495062288
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8882003552576801435}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc5cf22cf7e70e0458c5382b598f3ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movement: {fileID: 5633605218481521606}
 --- !u!1 &8882003552665207958
 GameObject:
   m_ObjectHideFlags: 0

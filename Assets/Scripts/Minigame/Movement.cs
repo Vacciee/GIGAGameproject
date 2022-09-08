@@ -10,8 +10,6 @@ public class Movement : MonoBehaviour
     //Alkuperäinen sijainti
     public Vector2 relativePosition;
 
-    private bool moving = false;
-
     private Vector2 movement;
     public Rigidbody2D rb;
 
