@@ -738,6 +738,7 @@ MonoBehaviour:
   scenePath: 
   active: 1
   interractionMenu: {fileID: 1080708694}
+  Kettu1_Final: {fileID: 1906619657}
 --- !u!1 &1080708694 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 310587582673441224, guid: 8322ed677910f9d43bc73f3e741d898b, type: 3}
@@ -1125,6 +1126,10 @@ PrefabInstance:
     - target: {fileID: -8653719598885068355, guid: 6c6c53c260ea9af4490292dfa7ae3711, type: 3}
       propertyPath: m_Name
       value: Kettu1_Final
+      objectReference: {fileID: 0}
+    - target: {fileID: -8653719598885068355, guid: 6c6c53c260ea9af4490292dfa7ae3711, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7559075417606971265, guid: 6c6c53c260ea9af4490292dfa7ae3711, type: 3}
       propertyPath: m_LocalScale.x

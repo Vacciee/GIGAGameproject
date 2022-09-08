@@ -28,7 +28,13 @@ EditorBuildSettings:
     guid: 77fee17dd02d84748b0150e2bfab8b6b
   - enabled: 1
     path: Assets/Scenes/Mars.unity
+    guid: a4f16024547e9f04ca1e7b995665fc11
+  - enabled: 1
+    path: Assets/Scenes/Moon.unity
     guid: 40abbdfb07caaa845a1c0202a0895226
+  - enabled: 1
+    path: Assets/Scenes/Earth.unity
+    guid: b2b88e119121bd74980b16657d066b54
   - enabled: 1
     path: Assets/Scenes/Trading.unity
     guid: ccb300e5e5b3ba04ab270a443ac73de9

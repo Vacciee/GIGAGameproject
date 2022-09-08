@@ -8,10 +8,11 @@ public class CollisionTrigger : MonoBehaviour
     public string scenePath;
     [Range(0, 1)] public int active = 0;
     public GameObject interractionMenu;
+    public GameObject Kettu1_Final;
 
     private void OnCollisionEnter2D(Collision2D other)
     {
-        if(active == 0)
+        if (active == 0)
         {
             SceneManager.LoadScene(scenePath);
         }
@@ -20,12 +21,13 @@ public class CollisionTrigger : MonoBehaviour
             if (!interractionMenu.activeInHierarchy)
             {
                 interractionMenu.SetActive(true);
-                Time.timeScale = 0f;
+                Kettu1_Final.SetActive(true);
             }
             else
             {
                 interractionMenu.SetActive(false);
-            }            
-        }        
+                Kettu1_Final.SetActive(false);
+            }
+        }
     }
 }
