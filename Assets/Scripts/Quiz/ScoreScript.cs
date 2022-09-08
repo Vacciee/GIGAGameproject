@@ -23,7 +23,6 @@ public class ScoreScript : MonoBehaviour
     public void ReducePoints()
     {
         reward *= 0.87f;
-        Mathf.Round(reward);
         Debug.Log("Reduced points, possible reward is at " + reward);
     }
 }

@@ -29,9 +29,9 @@ public class QuizManager : MonoBehaviour
     public Animator correctAnimator;
     public Animator wrongAnimator;
 
-    // Getting access to ProgressBar.cs
+    public GameObject Truck;
+    private TruckLoaderScript truckLoaderScript;
     public GameObject panelBar;
-    private ProgressBar pbScript;
     public GameObject QuizCanvas;
     private ScoreScript scoreScript;
 
@@ -42,8 +42,9 @@ public class QuizManager : MonoBehaviour
     void Awake()
     {
         panelBar = GameObject.Find("PanelBar");
-        pbScript = panelBar.GetComponent<ProgressBar>();
+        Truck = GameObject.Find("Truck");
         scoreScript = QuizCanvas.GetComponent<ScoreScript>();
+        truckLoaderScript = Truck.GetComponent<TruckLoaderScript>();
 
         button1 = GameObject.Find("Answer1").GetComponent<Button>();
         button2 = GameObject.Find("Answer2").GetComponent<Button>();
@@ -177,19 +178,25 @@ public class QuizManager : MonoBehaviour
         // Updating score
         scoreScript.AddToScore();
         // Adding progress
-        pbScript.progress += pbScript.maxProgress / answersToComplete;
-        // Updating progressbar
-        pbScript.SetProgress(pbScript.progress);
+        truckLoaderScript.progress += truckLoaderScript.maxProgress / answersToComplete;
+        // loading items to truck!
+        if (truckLoaderScript.progress > truckLoaderScript.fill)
+        {
+            truckLoaderScript.LoadNewItem();
+            Mathf.RoundToInt(truckLoaderScript.fill += 100 / truckLoaderScript.maxFill);
+        }
+        // // Updating progressbar
+        // pbScript.SetProgress(pbScript.progress);
         // popping up a check mark pop up
         correctAnimator.SetTrigger("OnCorrectAnswer");
         // Playing a sound
         audioSource.PlayOneShot(correctSound);
         // Checking if we have enough correct answers to end the game
-        if (pbScript.progress >= pbScript.maxProgress)
+        if (truckLoaderScript.progress >= truckLoaderScript.maxProgress)
         {
             // Game is ending!
             // Update score text!
-            scoreText.text = (ScoreScript.score).ToString();
+            scoreText.text = (Mathf.RoundToInt(ScoreScript.score)).ToString();
             // Play a sound to celebrate!
             audioSource.PlayOneShot(quizComplete);
             // Kill the listeners so answer buttons stop working
