@@ -811,8 +811,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Credits
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: ceb6ee80cad866e43a7294bdbb5c1480, type: 2}
-  m_sharedMaterial: {fileID: 718386540394839509, guid: ceb6ee80cad866e43a7294bdbb5c1480, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1417,8 +1417,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Options
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: ceb6ee80cad866e43a7294bdbb5c1480, type: 2}
-  m_sharedMaterial: {fileID: 718386540394839509, guid: ceb6ee80cad866e43a7294bdbb5c1480, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1810,7 +1810,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   examineMenu: {fileID: 0}
   talkMenu: {fileID: 0}
-  scenePath: Map
+  scenePath: Map2
 --- !u!95 &1604225865
 Animator:
   serializedVersion: 4
@@ -2285,8 +2285,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Guide
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: ceb6ee80cad866e43a7294bdbb5c1480, type: 2}
-  m_sharedMaterial: {fileID: 718386540394839509, guid: ceb6ee80cad866e43a7294bdbb5c1480, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
