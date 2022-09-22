@@ -123,87 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1001 &184695607
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 81287956210018982, guid: a35c76092b9bc9c44ab27e0ee4c529c0, type: 3}
-      propertyPath: m_Color.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 81287956210018982, guid: a35c76092b9bc9c44ab27e0ee4c529c0, type: 3}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 81287956210018982, guid: a35c76092b9bc9c44ab27e0ee4c529c0, type: 3}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 761721822446214028, guid: a35c76092b9bc9c44ab27e0ee4c529c0, type: 3}
-      propertyPath: m_Color.b
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 761721822446214028, guid: a35c76092b9bc9c44ab27e0ee4c529c0, type: 3}
-      propertyPath: m_Color.g
-      value: 0.6313726
-      objectReference: {fileID: 0}
-    - target: {fileID: 761721822446214028, guid: a35c76092b9bc9c44ab27e0ee4c529c0, type: 3}
-      propertyPath: m_Color.r
-      value: 0.023529412
-      objectReference: {fileID: 0}
-    - target: {fileID: 3653534762551717106, guid: a35c76092b9bc9c44ab27e0ee4c529c0, type: 3}
-      propertyPath: m_RootOrder
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 3653534762551717106, guid: a35c76092b9bc9c44ab27e0ee4c529c0, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.010973334
-      objectReference: {fileID: 0}
-    - target: {fileID: 3653534762551717106, guid: a35c76092b9bc9c44ab27e0ee4c529c0, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 4.05
-      objectReference: {fileID: 0}
-    - target: {fileID: 3653534762551717106, guid: a35c76092b9bc9c44ab27e0ee4c529c0, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3653534762551717106, guid: a35c76092b9bc9c44ab27e0ee4c529c0, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3653534762551717106, guid: a35c76092b9bc9c44ab27e0ee4c529c0, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3653534762551717106, guid: a35c76092b9bc9c44ab27e0ee4c529c0, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3653534762551717106, guid: a35c76092b9bc9c44ab27e0ee4c529c0, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3653534762551717106, guid: a35c76092b9bc9c44ab27e0ee4c529c0, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3653534762551717106, guid: a35c76092b9bc9c44ab27e0ee4c529c0, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3653534762551717106, guid: a35c76092b9bc9c44ab27e0ee4c529c0, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5887764103319506061, guid: a35c76092b9bc9c44ab27e0ee4c529c0, type: 3}
-      propertyPath: m_Name
-      value: MiniMapConsept
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: a35c76092b9bc9c44ab27e0ee4c529c0, type: 3}
 --- !u!1 &363673876
 GameObject:
   m_ObjectHideFlags: 0
@@ -217,7 +136,7 @@ GameObject:
   - component: {fileID: 363673879}
   - component: {fileID: 363673880}
   m_Layer: 0
-  m_Name: neptune
+  m_Name: mars
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -283,7 +202,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 363673876}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.37, y: 0.89, z: 0}
+  m_LocalPosition: {x: 9.23, y: -4.48, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -315,13 +234,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 363673876}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c4c1614fd8c87dd45ae74d0d02e9fcc3, type: 3}
+  m_Script: {fileID: 11500000, guid: 5697eac1b29b10548a5c4a9e183c2227, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scenePath: Mars
-  active: 0
+  examineMenu: {fileID: 0}
+  talkMenu: {fileID: 0}
   interractionMenu: {fileID: 0}
   Kettu1_Final: {fileID: 0}
+  scenePath: Mars
 --- !u!1 &397569347
 GameObject:
   m_ObjectHideFlags: 0
@@ -367,10 +287,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4c1614fd8c87dd45ae74d0d02e9fcc3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scenePath: Map3
+  scenePath: Map1
   active: 0
   interractionMenu: {fileID: 0}
   Kettu1_Final: {fileID: 0}
+  closeMenu: {fileID: 0}
 --- !u!61 &397569350
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -410,11 +331,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8882003552576801433, guid: ccbd6021e3b87164ba362b029f657b8c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.84
+      value: -6.21
       objectReference: {fileID: 0}
     - target: {fileID: 8882003552576801433, guid: ccbd6021e3b87164ba362b029f657b8c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.12
+      value: -3.28
       objectReference: {fileID: 0}
     - target: {fileID: 8882003552576801433, guid: ccbd6021e3b87164ba362b029f657b8c, type: 3}
       propertyPath: m_LocalPosition.z
@@ -559,8 +480,8 @@ EdgeCollider2D:
   m_EdgeRadius: 0
   m_Points:
   - {x: -9.798522, y: -5.3839645}
-  - {x: 9.603562, y: -5.3951187}
-  - {x: 9.588474, y: 5.396762}
+  - {x: 9.87615, y: -5.3951187}
+  - {x: 9.900388, y: 5.383198}
   - {x: -9.766094, y: 5.3990693}
   - {x: -9.802394, y: -5.406446}
   m_AdjacentStartPoint: {x: 0, y: 0}
@@ -580,7 +501,7 @@ GameObject:
   - component: {fileID: 655684346}
   - component: {fileID: 655684347}
   m_Layer: 0
-  m_Name: uranus
+  m_Name: earth
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -646,8 +567,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 655684343}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.74, y: -5.32, z: 0}
-  m_LocalScale: {x: 0.8, y: 0.8, z: 1}
+  m_LocalPosition: {x: -8.93, y: 5.08, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -678,13 +599,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 655684343}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c4c1614fd8c87dd45ae74d0d02e9fcc3, type: 3}
+  m_Script: {fileID: 11500000, guid: 5697eac1b29b10548a5c4a9e183c2227, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scenePath: Earth
-  active: 0
+  examineMenu: {fileID: 0}
+  talkMenu: {fileID: 0}
   interractionMenu: {fileID: 0}
   Kettu1_Final: {fileID: 0}
+  scenePath: Earth
 --- !u!1 &670109723
 GameObject:
   m_ObjectHideFlags: 0
@@ -734,6 +656,7 @@ MonoBehaviour:
   active: 0
   interractionMenu: {fileID: 0}
   Kettu1_Final: {fileID: 0}
+  closeMenu: {fileID: 0}
 --- !u!61 &670109726
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -777,7 +700,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1105065292
 Transform:
   m_ObjectHideFlags: 0
@@ -805,10 +728,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4c1614fd8c87dd45ae74d0d02e9fcc3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scenePath: Map5
-  active: 1
+  scenePath: map3
+  active: 0
   interractionMenu: {fileID: 0}
   Kettu1_Final: {fileID: 0}
+  closeMenu: {fileID: 0}
 --- !u!61 &1105065294
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1049,7 +973,7 @@ GameObject:
   - component: {fileID: 1909069660}
   - component: {fileID: 1909069661}
   m_Layer: 0
-  m_Name: pluto
+  m_Name: moon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1115,7 +1039,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1909069657}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.78, y: -3.94, z: 0}
+  m_LocalPosition: {x: -2.99, y: 1.98, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1147,10 +1071,72 @@ MonoBehaviour:
   m_GameObject: {fileID: 1909069657}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c4c1614fd8c87dd45ae74d0d02e9fcc3, type: 3}
+  m_Script: {fileID: 11500000, guid: 5697eac1b29b10548a5c4a9e183c2227, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scenePath: Moon
-  active: 0
+  examineMenu: {fileID: 0}
+  talkMenu: {fileID: 0}
   interractionMenu: {fileID: 0}
   Kettu1_Final: {fileID: 0}
+  scenePath: Moon
+--- !u!1001 &3315347577680224601
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3653534762551717106, guid: a35c76092b9bc9c44ab27e0ee4c529c0, type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3653534762551717106, guid: a35c76092b9bc9c44ab27e0ee4c529c0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.010973334
+      objectReference: {fileID: 0}
+    - target: {fileID: 3653534762551717106, guid: a35c76092b9bc9c44ab27e0ee4c529c0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 4.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 3653534762551717106, guid: a35c76092b9bc9c44ab27e0ee4c529c0, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3653534762551717106, guid: a35c76092b9bc9c44ab27e0ee4c529c0, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3653534762551717106, guid: a35c76092b9bc9c44ab27e0ee4c529c0, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3653534762551717106, guid: a35c76092b9bc9c44ab27e0ee4c529c0, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3653534762551717106, guid: a35c76092b9bc9c44ab27e0ee4c529c0, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3653534762551717106, guid: a35c76092b9bc9c44ab27e0ee4c529c0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3653534762551717106, guid: a35c76092b9bc9c44ab27e0ee4c529c0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3653534762551717106, guid: a35c76092b9bc9c44ab27e0ee4c529c0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5887764103319506061, guid: a35c76092b9bc9c44ab27e0ee4c529c0, type: 3}
+      propertyPath: m_Name
+      value: MiniMapConsept
+      objectReference: {fileID: 0}
+    - target: {fileID: 5887764103319506061, guid: a35c76092b9bc9c44ab27e0ee4c529c0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a35c76092b9bc9c44ab27e0ee4c529c0, type: 3}

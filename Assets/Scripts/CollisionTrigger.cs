@@ -10,6 +10,8 @@ public class CollisionTrigger : MonoBehaviour
     [Range(0, 1)] public int active = 0;
     public GameObject interractionMenu;
     public GameObject Kettu1_Final;
+
+    public GameObject closeMenu;
     #endregion
 
     private void OnCollisionEnter2D(Collision2D other)
@@ -25,11 +27,10 @@ public class CollisionTrigger : MonoBehaviour
                 interractionMenu.SetActive(true);
                 Kettu1_Final.SetActive(true);
             }
-            else
-            {
-                interractionMenu.SetActive(false);
-                Kettu1_Final.SetActive(false);
-            }
+        }
+        if (interractionMenu.activeInHierarchy)
+        {
+            Time.timeScale = 0f;
         }
     }
 }

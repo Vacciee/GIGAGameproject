@@ -6,7 +6,7 @@ public class Quiz : MonoBehaviour
     GameManager gameManager;
     [SerializeField] int answer = 0;
 
-    public void update()
+    public void Update()
     {
         if (answer == 1)
         {

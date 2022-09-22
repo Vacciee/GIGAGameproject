@@ -7,6 +7,9 @@ public class Load : MonoBehaviour
     #region Variables;
     [Tooltip("Used in interractive UI")] public GameObject examineMenu;
     [Tooltip("Used in interractive UI")] public GameObject talkMenu;
+    [Tooltip("Used in interractive UI")] public GameObject interractionMenu;
+    [Tooltip("Used in interractive UI")] public GameObject Kettu1_Final;
+
     int index;
     [Tooltip("Name the scene name exactly how its written in scene folder!")] public string scenePath;
     #endregion
@@ -56,5 +59,17 @@ public class Load : MonoBehaviour
             talkMenu.SetActive(false);
         }
     }
-    #endregion
+
+    public void Close()
+    {
+        interractionMenu.SetActive(false);
+        Kettu1_Final.SetActive(false);
+        Time.timeScale = 1f;
+    }
+
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        SceneManager.LoadScene(scenePath);
+        #endregion
+    }
 }

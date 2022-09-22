@@ -178,6 +178,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   examineMenu: {fileID: 0}
   talkMenu: {fileID: 0}
+  interractionMenu: {fileID: 0}
+  Kettu1_Final: {fileID: 0}
   scenePath: Options
 --- !u!114 &289676375
 MonoBehaviour:
@@ -496,6 +498,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   examineMenu: {fileID: 0}
   talkMenu: {fileID: 0}
+  interractionMenu: {fileID: 0}
+  Kettu1_Final: {fileID: 0}
   scenePath: Guide
 --- !u!114 &603102475
 MonoBehaviour:
@@ -1810,7 +1814,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   examineMenu: {fileID: 0}
   talkMenu: {fileID: 0}
-  scenePath: Map2
+  interractionMenu: {fileID: 0}
+  Kettu1_Final: {fileID: 0}
+  scenePath: Map
 --- !u!95 &1604225865
 Animator:
   serializedVersion: 4
@@ -1886,6 +1892,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   examineMenu: {fileID: 0}
   talkMenu: {fileID: 0}
+  interractionMenu: {fileID: 0}
+  Kettu1_Final: {fileID: 0}
   scenePath: Credits
 --- !u!114 &1613289670
 MonoBehaviour:
