@@ -1,3 +1,6 @@
+using System;
+using System.IO;
+using System.Runtime.Serialization.Formatters.Binary;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -7,6 +10,10 @@ public class GameManager : MonoBehaviour
 
     public static GameManager manager;
     #endregion
+
+    public string currentPlanet;
+    public bool Planet1;
+    public int planet1Score;
 
     private void Awake()
     {
@@ -30,5 +37,46 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
         }
         #endregion
+    }
+
+    // Save game
+    public void Save()
+    {
+        Debug.Log("Game Saved");
+        BinaryFormatter bf = new BinaryFormatter();
+        FileStream file = File.Create(Application.persistentDataPath + "/playerInfo.dat");
+        PlayerData playerData = new PlayerData();
+        playerData.currentPlanet = currentPlanet;
+        playerData.Planet1 = Planet1;
+        playerData.planet1Score = planet1Score;
+
+        bf.Serialize(file, playerData);
+        file.Close();
+    }
+
+    // Load saved game
+    public void Load()
+    {
+        // Tsekataan onko tallennettua tiedostoa olemassa
+        if (File.Exists(Application.persistentDataPath + "/playerInfo.dat"))
+        {
+            Debug.Log("Game Loaded");
+            BinaryFormatter bf = new BinaryFormatter();
+            FileStream file = File.Open(Application.persistentDataPath + "/playerInfo.dat", FileMode.Open);
+            PlayerData playerData = (PlayerData)bf.Deserialize(file);
+            file.Close();
+            currentPlanet = playerData.currentPlanet;
+            Planet1 = playerData.Planet1;
+            planet1Score = playerData.planet1Score;
+        }
+    }
+
+    // Data that gets saved
+    [Serializable]
+    class PlayerData
+    {
+        public string currentPlanet;
+        public bool Planet1;
+        public int planet1Score;
     }
 }
