@@ -1,20 +1,20 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class QuizPauseScript : MonoBehaviour
 {
 
-    public GameObject pauseMenu;
+    [HideInInspector] public GameObject pauseMenu;
+    [HideInInspector] public GameObject leaveConfirm;
 
     void Awake()
     {
+        leaveConfirm = GameObject.Find("LeaveConfirm");
         pauseMenu = GameObject.Find("PauseMenu");
     }
 
     void Start()
     {
+        leaveConfirm.SetActive(false);
         pauseMenu.SetActive(false);
     }
 
@@ -30,5 +30,14 @@ public class QuizPauseScript : MonoBehaviour
         Time.timeScale = 1;
     }
 
+    public void LeaveConfirm()
+    {
+        leaveConfirm.SetActive(true);
+    }
+
+    public void LeaveCancel()
+    {
+        leaveConfirm.SetActive(false);
+    }
 
 }
