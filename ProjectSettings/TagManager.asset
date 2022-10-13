@@ -5,6 +5,18 @@ TagManager:
   serializedVersion: 2
   tags:
   - Asteroid
+  - Mercury
+  - Venus
+  - Earth
+  - Mars
+  - Jupiter
+  - Saturn
+  - Uranus
+  - Neptune
+  - Pluto
+  - Trigger1R
+  - Trigger2L
+  - Trigger2R
   layers:
   - Default
   - TransparentFX
