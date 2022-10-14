@@ -21,7 +21,7 @@ public class Movement2 : MonoBehaviour
     {
         mousePosition = Input.mousePosition;
         mousePosition = Camera.main.ScreenToWorldPoint(mousePosition);
-        position = Vector2.Lerp(transform.position, mousePosition, speed);
+        position = Vector2.MoveTowards(transform.position, mousePosition, speed);
         var dir = Input.mousePosition - Camera.main.WorldToScreenPoint(transform.position);
         var angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);

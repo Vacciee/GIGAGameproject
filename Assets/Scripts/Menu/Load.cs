@@ -5,37 +5,32 @@ using UnityEngine.SceneManagement;
 public class Load : MonoBehaviour
 {
     #region Variables;
-    [Tooltip("Used in interractive UI")] public GameObject examineMenu;
-    [Tooltip("Used in interractive UI")] public GameObject talkMenu;
-    [Tooltip("Used in interractive UI")] public GameObject interractionMenu;
-    [Tooltip("Used in interractive UI")] public GameObject Kettu1_Final;
-
-    int index;
-    [Tooltip("Name the scene name exactly how its written in scene folder!")] public string scenePath;
+    [Tooltip("Used in interractive UI")] public GameObject interractionMenu; // Näyttää interractio menun pelissä
+    [Tooltip("Used in interractive UI")] public GameObject examineMenu; // Avaa Examine menun, Examine napin painnalluksesta
+    [Tooltip("Used in interractive UI")] public GameObject talkMenu; // Avaa Talk menun, Talk napin painnalluksesta
+    [Tooltip("Name the scene name exactly how its written in scene folder!")] public string scenePath; // Scene pathin määrittely Unity Editorissa
     #endregion
 
     #region Scene Loading
-    // Main menu Control script
-    public void LoadMenu()
+    // Main menu hallinoinnin scripti
+    public void Menu() // Napin 'On Click ()' Load.Menu. Avaa unity editorrissa asetetun ScenePathin Scenen 
     {
-        SceneManager.LoadScene(scenePath);
-        Time.timeScale = 1f;
+        SceneManager.LoadScene(scenePath); // Muokataan editorissa
+        GameObject.Find("PlayerScaler").GetComponent<Movement2>().enabled = true; // Etsii pelaajan scalerin ja enablee sen liike scriptin. NOTE: antaa erroria jos scaler ei ole scenessä.
+        Debug.Log("Etsittiin pelaajan prefab");
     }
 
-    public void LoadQuiz()
-    {
-        SceneManager.LoadScene("Quiz");
-        Time.timeScale = 1f;
-    }
+    // public void LoadQuiz()
+    // {
+    //     SceneManager.LoadScene("Quiz");
+    // }
+    //
+    // public void ExitApplication() // Quit Button
+    // {
+    //     Application.Quit();
+    // }
 
-    /*
-    public void ExitApplication() // Quit Button
-    {
-        Application.Quit();
-    }
-    */
-
-    public void Examine()
+    public void Examine() // Napin 'On Click ()' Load.Talk
     {
         if (!examineMenu.activeInHierarchy)
         {
@@ -47,7 +42,7 @@ public class Load : MonoBehaviour
             examineMenu.SetActive(false);
         }
     }
-    public void Talk()
+    public void Talk() // Napin 'On Click ()' Load.Talk
     {
         if (!talkMenu.activeInHierarchy)
         {
@@ -60,16 +55,10 @@ public class Load : MonoBehaviour
         }
     }
 
-    public void Close()
+    public void Close() // Napin 'On Click ()' Load.Talk
     {
         interractionMenu.SetActive(false);
-        Kettu1_Final.SetActive(false);
-        Time.timeScale = 1f;
+        GameObject.Find("PlayerScaler").GetComponent<Movement2>().enabled = true;
     }
-
-    private void OnCollisionEnter2D(Collision2D other)
-    {
-        SceneManager.LoadScene(scenePath);
-        #endregion
-    }
+    #endregion
 }
