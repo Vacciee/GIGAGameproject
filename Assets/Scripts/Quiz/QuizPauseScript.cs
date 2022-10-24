@@ -3,31 +3,22 @@ using UnityEngine;
 public class QuizPauseScript : MonoBehaviour
 {
 
-    [HideInInspector] public GameObject pauseMenu;
-    [HideInInspector] public GameObject leaveConfirm;
-
-    void Awake()
-    {
-        leaveConfirm = GameObject.Find("LeaveConfirm");
-        pauseMenu = GameObject.Find("PauseMenu");
-    }
-
-    void Start()
-    {
-        leaveConfirm.SetActive(false);
-        pauseMenu.SetActive(false);
-    }
+    public GameObject pauseMenu;
+    public GameObject leaveConfirm;
+    // These game objects need to be disabled in the inspector!
 
     public void PauseQuiz()
     {
-        pauseMenu.SetActive(true);
         Time.timeScale = 0;
+        Debug.Log("Timescale is now set to 0 (Pause-button was pressed).");
+        pauseMenu.SetActive(true);
     }
 
     public void ResumeQuiz()
     {
         pauseMenu.SetActive(false);
         Time.timeScale = 1;
+        Debug.Log("Timescale is now set to 1 (Resume-button in pause menu was pressed).");
     }
 
     public void LeaveConfirm()

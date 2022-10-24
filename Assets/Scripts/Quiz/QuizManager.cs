@@ -1,5 +1,3 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -15,29 +13,21 @@ public class QuizManager : MonoBehaviour
     private int currentButton;
     public int answersToComplete = 10; // How many correct answers player needs to give
     public Button correctButton;
-    private Button button1;
-    private Button button2;
-    private Button button3;
-    private Button button4;
-    private TMP_Text button1text;
-    private TMP_Text button2text;
-    private TMP_Text button3text;
-    private TMP_Text button4text;
-    private TMP_Text questionText;
-    private TMP_Text scoreText;
+    private Button button1, button2, button3, button4;
+    private TMP_Text button1text, button2text, button3text, button4text;
+    private TMP_Text questionText, scoreText;
     private GameObject popUpComplete;
-    public Animator correctAnimator;
-    public Animator wrongAnimator;
+    public Animator correctAnimator, wrongAnimator;
 
     public GameObject Truck;
     private TruckLoaderScript truckLoaderScript;
-    public GameObject panelBar;
-    public GameObject QuizCanvas;
+    public GameObject panelBar, QuizCanvas;
     private ScoreScript scoreScript;
 
     public AudioSource audioSource;
-    public AudioClip correctSound;
-    public AudioClip quizComplete;
+    public AudioClip correctSound, quizComplete;
+
+
 
     void Awake()
     {
@@ -197,6 +187,9 @@ public class QuizManager : MonoBehaviour
             // Game is ending!
             // Update score text!
             scoreText.text = (Mathf.RoundToInt(ScoreScript.score)).ToString();
+            // Updating player score and planet cleared into GameManager
+
+
             // Play a sound to celebrate!
             audioSource.PlayOneShot(quizComplete);
             // Kill the listeners so answer buttons stop working
@@ -227,7 +220,7 @@ public class QuizManager : MonoBehaviour
     void GetNewQuestion()
     {
         newQuestion = UnityEngine.Random.Range(0, data.Count);
-        // Making sure the while loop doesnt do weird stuff when there is only one question left
+        // The if is here to make sure the while loop doesnt do weird stuff when there is only one question left
         if (data.Count > 1)
         {
             while (newQuestion == currentQuestion)
