@@ -6,5 +6,6 @@ public class LeaveQuiz : MonoBehaviour
     public void Leave()
     {
         SceneManager.LoadScene("Map");
+        Time.timeScale = 1;
     }
 }
