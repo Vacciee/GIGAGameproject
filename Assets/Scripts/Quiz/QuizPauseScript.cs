@@ -5,6 +5,7 @@ public class QuizPauseScript : MonoBehaviour
 
     public GameObject pauseMenu;
     public GameObject leaveConfirm;
+    public GameObject OptionsMenu;
     // These game objects need to be disabled in the inspector!
 
     public void PauseQuiz()
@@ -29,6 +30,18 @@ public class QuizPauseScript : MonoBehaviour
     public void LeaveCancel()
     {
         leaveConfirm.SetActive(false);
+    }
+
+    public void OptionsOpen()
+    {
+        OptionsMenu.SetActive(true);
+        pauseMenu.SetActive(false);
+    }
+
+    public void OptionsClose()
+    {
+        OptionsMenu.SetActive(false);
+        pauseMenu.SetActive(true);
     }
 
 }
