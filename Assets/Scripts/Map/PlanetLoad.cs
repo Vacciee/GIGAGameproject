@@ -1,4 +1,3 @@
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -6,6 +5,7 @@ using UnityEngine.SceneManagement;
 public class PlanetLoad : MonoBehaviour
 {
     #region Variables;
+    [Header("Desired scene name")]
     [Tooltip("Name the scene name exactly how its written in scene folder!")] public string scenePath;
     #endregion
 

@@ -17,11 +17,12 @@ TagManager:
   - Trigger1R
   - Trigger2L
   - Trigger2R
+  - Proxy
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Trigger
   - Water
   - UI
   - 

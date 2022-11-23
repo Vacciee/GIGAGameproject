@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Collision : MonoBehaviour
@@ -18,7 +17,7 @@ public class Collision : MonoBehaviour
     private IEnumerator MoveDisable()
     {
         movement.enabled = false;
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(0.5f);
         movement.enabled = true;
     }
 }
