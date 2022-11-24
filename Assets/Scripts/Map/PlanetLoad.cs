@@ -15,6 +15,7 @@ public class PlanetLoad : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D other)
     {
         SceneManager.LoadScene(scenePath);
+        Time.timeScale = 1f;
     }
 
     // public void LoadMenu()

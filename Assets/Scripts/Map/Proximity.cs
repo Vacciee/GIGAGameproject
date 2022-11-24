@@ -8,7 +8,7 @@ public class Proximity : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            Debug.Log("Player is in proximity");
+            Debug.Log("Player is in proximity of");
 
             if (!PlanetName.activeInHierarchy)
             {

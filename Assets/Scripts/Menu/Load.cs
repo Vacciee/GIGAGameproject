@@ -9,15 +9,19 @@ public class Load : MonoBehaviour
     [Tooltip("Used in interractive UI")] public GameObject examineMenu; // Avaa Examine menun, Examine napin painnalluksesta
     [Tooltip("Used in interractive UI")] public GameObject talkMenu; // Avaa Talk menun, Talk napin painnalluksesta
     [Tooltip("Name the scene name exactly how its written in scene folder!")] public string scenePath; // Scene pathin määrittely Unity Editorissa
+    // public Movement2 player;
     #endregion
 
     #region Scene Loading
     // Main menu hallinoinnin scripti
     public void Menu() // Napin 'On Click ()' Load.Menu. Avaa unity editorrissa asetetun ScenePathin Scenen 
     {
+        Time.timeScale = 1f;
         SceneManager.LoadScene(scenePath); // Muokataan editorissa
-        GameObject.Find("PlayerScaler").GetComponent<Movement2>().enabled = true; // Etsii pelaajan scalerin ja enablee sen liike scriptin. NOTE: antaa erroria jos scaler ei ole scenessä.
-        Debug.Log("Etsittiin pelaajan prefab");
+        // player.GetComponent<Movement2>().enabled = true;
+        
+        // GameObject.Find("PlayerScaler").GetComponent<Movement2>().enabled = true; // Etsii pelaajan scalerin ja enablee sen liike scriptin. NOTE: antaa erroria jos scaler ei ole scenessä.
+        // Debug.Log("Etsittiin pelaajan prefab");
     }
 
     // public void LoadQuiz()
@@ -30,7 +34,7 @@ public class Load : MonoBehaviour
     //     Application.Quit();
     // }
 
-    public void Examine() // Napin 'On Click ()' Load.Talk
+    public void Examine() // Napin 'On Click ()' Load.Examine
     {
         if (!examineMenu.activeInHierarchy)
         {

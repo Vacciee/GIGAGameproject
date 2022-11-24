@@ -716,10 +716,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: IngameMenu
       objectReference: {fileID: 0}
-    - target: {fileID: 8771723374108306107, guid: 16fa3c88764d91342998193943e0d63e, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 16fa3c88764d91342998193943e0d63e, type: 3}
 --- !u!1 &1035962250

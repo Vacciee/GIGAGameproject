@@ -22,14 +22,15 @@ public class GameManager : MonoBehaviour
         Screen.SetResolution(1920, 1080, true, 60);
         #region Check managers
 
+        Debug.Log("Checking & destroying other GameManagers...");
+
         // Luodaan Manageri ja tsekataan, onko toinen olemassa ja tuhotaan toinen. 
         if (manager == null)
         {
             // Jos ei ole manageria kerrotaan, etta tama luokka on manageri.
             // Kerrotaan, etta tama manageri ei saa tuhoutua jos scene vaihtuu toiseen. 
             DontDestroyOnLoad(gameObject);
-            manager = this;
-
+            manager = this;            
         }
         else
         {
@@ -39,6 +40,11 @@ public class GameManager : MonoBehaviour
         }
         #endregion
     }
+
+    // private void Start() 
+    // {
+    //     Find.gameObject("PlayerScaler").Movement2.SetActive = true;
+    // }
 
     // Save game
     public void Save()
