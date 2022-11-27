@@ -4,6 +4,7 @@ public class SettingsMenu : MonoBehaviour
 {
     public GameObject options;
     public GameObject settingsB;
+    public GameManager gameManager;
 
 
     private void Update()
@@ -59,4 +60,5 @@ public class SettingsMenu : MonoBehaviour
         }
     }
     #endregion
+
 }

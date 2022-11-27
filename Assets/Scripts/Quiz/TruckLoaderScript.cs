@@ -1,16 +1,14 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class TruckLoaderScript : MonoBehaviour
 {
-    public GameObject item1, item2, item3, item4, coolItem1;
     private GameObject spawnLimitLeft, spawnLimitRight;
     // Tehdään itemeistä Trucking lapsia
     private Transform parent;
     // List for all prefabs
-    private List<GameObject> itemList;
-    private List<GameObject> coolItemList;
+    public List<GameObject> itemList = new List<GameObject>();
+    public List<GameObject> coolItemList = new List<GameObject>();
     [HideInInspector]
     public int maxProgress = 100;
     public int progress;
@@ -27,14 +25,6 @@ public class TruckLoaderScript : MonoBehaviour
         spawnLimitLeft = GameObject.Find("SpawnLimitLeft");
         spawnLimitRight = GameObject.Find("SpawnLimitRight");
         parent = GameObject.Find("Truck").transform;
-        // Listing the prefabs so we can pick one randomly
-        itemList = new List<GameObject>();
-        itemList.Add(item1);
-        itemList.Add(item2);
-        itemList.Add(item3);
-        itemList.Add(item4);
-        coolItemList = new List<GameObject>();
-        coolItemList.Add(coolItem1);
         progress = 0;
         fill = 0;
     }

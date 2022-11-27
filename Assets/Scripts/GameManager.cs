@@ -14,7 +14,7 @@ public class GameManager : MonoBehaviour
     [Range(0, 9)]
     public int currentPlanet;
     public bool Planet1, Planet2, Planet3, Planet4, Planet5, Planet6, Planet7, Planet8, Planet9;
-    public int planet1Score, planet2Score, planet3Score, planet4Score, planet5Score, planet6Score, planet7Score, planet8Score, planet9Score;
+    public int planet1Score, planet2Score, planet3Score, planet4Score, planet5Score, planet6Score, planet7Score, planet8Score, planet9Score, userVol;
 
     private void Awake()
     {
@@ -30,7 +30,7 @@ public class GameManager : MonoBehaviour
             // Jos ei ole manageria kerrotaan, etta tama luokka on manageri.
             // Kerrotaan, etta tama manageri ei saa tuhoutua jos scene vaihtuu toiseen. 
             DontDestroyOnLoad(gameObject);
-            manager = this;            
+            manager = this;
         }
         else
         {
@@ -72,6 +72,7 @@ public class GameManager : MonoBehaviour
         playerData.planet7Score = planet7Score;
         playerData.planet8Score = planet8Score;
         playerData.planet9Score = planet9Score;
+        playerData.userVol = userVol;
 
         bf.Serialize(file, playerData);
         file.Close();
@@ -107,6 +108,7 @@ public class GameManager : MonoBehaviour
             planet7Score = playerData.planet7Score;
             planet8Score = playerData.planet8Score;
             planet9Score = playerData.planet9Score;
+            userVol = playerData.userVol;
         }
     }
 
@@ -116,6 +118,6 @@ public class GameManager : MonoBehaviour
     {
         public int currentPlanet;
         public bool Planet1, Planet2, Planet3, Planet4, Planet5, Planet6, Planet7, Planet8, Planet9;
-        public int planet1Score, planet2Score, planet3Score, planet4Score, planet5Score, planet6Score, planet7Score, planet8Score, planet9Score;
+        public int planet1Score, planet2Score, planet3Score, planet4Score, planet5Score, planet6Score, planet7Score, planet8Score, planet9Score, userVol;
     }
 }
