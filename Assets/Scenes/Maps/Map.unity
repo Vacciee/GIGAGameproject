@@ -7313,12 +7313,22 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1127002655}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7e6b4d7f7afd066478312fc98d47dfb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawns: []
+  spawns:
+  - {fileID: 151696968}
+  - {fileID: 576527625}
+  - {fileID: 1339393182}
+  - {fileID: 783698132}
+  - {fileID: 405175112}
+  - {fileID: 72168715}
+  - {fileID: 655934276}
+  - {fileID: 118896151}
+  - {fileID: 2122076542}
+  - {fileID: 1020519615}
 --- !u!4 &1128587220 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 168722536151559141, guid: f43fe269179252642bb4e91b7c249575, type: 3}
