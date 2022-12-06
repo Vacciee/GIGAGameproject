@@ -1615,7 +1615,23 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 696300762048840492, guid: ccbd6021e3b87164ba362b029f657b8c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2173826863379011524, guid: ccbd6021e3b87164ba362b029f657b8c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4168297406934761973, guid: ccbd6021e3b87164ba362b029f657b8c, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5633605218481521606, guid: ccbd6021e3b87164ba362b029f657b8c, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8882003552576801412, guid: ccbd6021e3b87164ba362b029f657b8c, type: 3}
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}

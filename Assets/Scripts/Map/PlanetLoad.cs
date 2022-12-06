@@ -17,10 +17,5 @@ public class PlanetLoad : MonoBehaviour
         SceneManager.LoadScene(scenePath);
         Time.timeScale = 1f;
     }
-
-    // public void LoadMenu()
-    // {
-    //     SceneManager.LoadScene(scenePath);
-    // }
     #endregion
 }
