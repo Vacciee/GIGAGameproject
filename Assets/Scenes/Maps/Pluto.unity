@@ -736,7 +736,7 @@ GameObject:
   - component: {fileID: 1035962253}
   - component: {fileID: 1035962254}
   m_Layer: 0
-  m_Name: earth
+  m_Name: pluto
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -822,9 +822,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.09, y: -0.06}
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 3.65
+  m_Radius: 1.56
 --- !u!114 &1035962254
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -841,7 +841,7 @@ MonoBehaviour:
   interractionMenu: {fileID: 1080708694}
   closeMenu: {fileID: 1608149645}
   planet: {fileID: 1035962250}
-  person: {fileID: 1622467905}
+  person: {fileID: 1608149646}
 --- !u!1 &1080708694 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 310587582673441224, guid: 8322ed677910f9d43bc73f3e741d898b, type: 3}
@@ -995,75 +995,75 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1148054014, guid: 8322ed677910f9d43bc73f3e741d898b, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1148054014, guid: 8322ed677910f9d43bc73f3e741d898b, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1148054014, guid: 8322ed677910f9d43bc73f3e741d898b, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 465.74
       objectReference: {fileID: 0}
     - target: {fileID: 1148054014, guid: 8322ed677910f9d43bc73f3e741d898b, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 126
       objectReference: {fileID: 0}
     - target: {fileID: 1148054014, guid: 8322ed677910f9d43bc73f3e741d898b, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 232.87
       objectReference: {fileID: 0}
     - target: {fileID: 1148054014, guid: 8322ed677910f9d43bc73f3e741d898b, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -567
       objectReference: {fileID: 0}
     - target: {fileID: 1348289997, guid: 8322ed677910f9d43bc73f3e741d898b, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1348289997, guid: 8322ed677910f9d43bc73f3e741d898b, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1348289997, guid: 8322ed677910f9d43bc73f3e741d898b, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 465.74
       objectReference: {fileID: 0}
     - target: {fileID: 1348289997, guid: 8322ed677910f9d43bc73f3e741d898b, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 126
       objectReference: {fileID: 0}
     - target: {fileID: 1348289997, guid: 8322ed677910f9d43bc73f3e741d898b, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 232.87
       objectReference: {fileID: 0}
     - target: {fileID: 1348289997, guid: 8322ed677910f9d43bc73f3e741d898b, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -441
       objectReference: {fileID: 0}
     - target: {fileID: 310587582152280635, guid: 8322ed677910f9d43bc73f3e741d898b, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 310587582152280635, guid: 8322ed677910f9d43bc73f3e741d898b, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 310587582152280635, guid: 8322ed677910f9d43bc73f3e741d898b, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 465.74
       objectReference: {fileID: 0}
     - target: {fileID: 310587582152280635, guid: 8322ed677910f9d43bc73f3e741d898b, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 126
       objectReference: {fileID: 0}
     - target: {fileID: 310587582152280635, guid: 8322ed677910f9d43bc73f3e741d898b, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 232.87
       objectReference: {fileID: 0}
     - target: {fileID: 310587582152280635, guid: 8322ed677910f9d43bc73f3e741d898b, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -189
       objectReference: {fileID: 0}
     - target: {fileID: 310587582673441224, guid: 8322ed677910f9d43bc73f3e741d898b, type: 3}
       propertyPath: m_Name
@@ -1157,51 +1157,139 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 310587582723252312, guid: 8322ed677910f9d43bc73f3e741d898b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 310587582723252313, guid: 8322ed677910f9d43bc73f3e741d898b, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 216.0715
+      objectReference: {fileID: 0}
+    - target: {fileID: 310587582723252313, guid: 8322ed677910f9d43bc73f3e741d898b, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -137.03583
+      objectReference: {fileID: 0}
     - target: {fileID: 310587582824686314, guid: 8322ed677910f9d43bc73f3e741d898b, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 310587582824686314, guid: 8322ed677910f9d43bc73f3e741d898b, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 310587582824686314, guid: 8322ed677910f9d43bc73f3e741d898b, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 465.74
       objectReference: {fileID: 0}
     - target: {fileID: 310587582824686314, guid: 8322ed677910f9d43bc73f3e741d898b, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 126
       objectReference: {fileID: 0}
     - target: {fileID: 310587582824686314, guid: 8322ed677910f9d43bc73f3e741d898b, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 232.87
       objectReference: {fileID: 0}
     - target: {fileID: 310587582824686314, guid: 8322ed677910f9d43bc73f3e741d898b, type: 3}
       propertyPath: m_AnchoredPosition.y
+      value: -63
+      objectReference: {fileID: 0}
+    - target: {fileID: 310587583547130572, guid: 8322ed677910f9d43bc73f3e741d898b, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 310587583547130572, guid: 8322ed677910f9d43bc73f3e741d898b, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 310587583547130572, guid: 8322ed677910f9d43bc73f3e741d898b, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 310587583547130572, guid: 8322ed677910f9d43bc73f3e741d898b, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 310587583547130572, guid: 8322ed677910f9d43bc73f3e741d898b, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 310587583547130572, guid: 8322ed677910f9d43bc73f3e741d898b, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 310587583547130573, guid: 8322ed677910f9d43bc73f3e741d898b, type: 3}
+      propertyPath: m_text
+      value: Pluto is a complex and mysterious world with mountains, valleys, plains,
+        craters, and maybe glaciers. Pluto was long considered our solar system's
+        ninth planet. But after the discovery of similar intriguing worlds deeper
+        in the distant Kuiper Belt, icy Pluto was reclassified as a dwarf planet.
+      objectReference: {fileID: 0}
+    - target: {fileID: 310587583547130573, guid: 8322ed677910f9d43bc73f3e741d898b, type: 3}
+      propertyPath: m_fontStyle
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1623958712603201870, guid: 8322ed677910f9d43bc73f3e741d898b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2972028110213169038, guid: 8322ed677910f9d43bc73f3e741d898b, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3126871601511944746, guid: 8322ed677910f9d43bc73f3e741d898b, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3126871601511944746, guid: 8322ed677910f9d43bc73f3e741d898b, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3126871601511944746, guid: 8322ed677910f9d43bc73f3e741d898b, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 465.74
       objectReference: {fileID: 0}
     - target: {fileID: 3126871601511944746, guid: 8322ed677910f9d43bc73f3e741d898b, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 126
       objectReference: {fileID: 0}
     - target: {fileID: 3126871601511944746, guid: 8322ed677910f9d43bc73f3e741d898b, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 232.87
       objectReference: {fileID: 0}
     - target: {fileID: 3126871601511944746, guid: 8322ed677910f9d43bc73f3e741d898b, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -315
+      objectReference: {fileID: 0}
+    - target: {fileID: 4227861560717724481, guid: 8322ed677910f9d43bc73f3e741d898b, type: 3}
+      propertyPath: m_text
+      value: Pluto is smaller than Earth's moon but larger than what it was previously
+        thought. Pluto also has a heart shape on its surface.
+      objectReference: {fileID: 0}
+    - target: {fileID: 4227861560717724481, guid: 8322ed677910f9d43bc73f3e741d898b, type: 3}
+      propertyPath: m_fontStyle
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6193688904338943188, guid: 8322ed677910f9d43bc73f3e741d898b, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6193688904338943188, guid: 8322ed677910f9d43bc73f3e741d898b, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6193688904338943188, guid: 8322ed677910f9d43bc73f3e741d898b, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6193688904338943188, guid: 8322ed677910f9d43bc73f3e741d898b, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6193688904338943188, guid: 8322ed677910f9d43bc73f3e741d898b, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6193688904338943188, guid: 8322ed677910f9d43bc73f3e741d898b, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
@@ -1212,9 +1300,9 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1348289996, guid: 8322ed677910f9d43bc73f3e741d898b, type: 3}
   m_PrefabInstance: {fileID: 1608149644}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1622467905 stripped
+--- !u!1 &1608149646 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 1622467905, guid: 8322ed677910f9d43bc73f3e741d898b, type: 3}
+  m_CorrespondingSourceObject: {fileID: 569652437391327265, guid: 8322ed677910f9d43bc73f3e741d898b, type: 3}
   m_PrefabInstance: {fileID: 1608149644}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &1754916820 stripped
@@ -1590,6 +1678,10 @@ PrefabInstance:
       propertyPath: options
       value: 
       objectReference: {fileID: 1001867061}
+    - target: {fileID: 4168297406934761973, guid: ccbd6021e3b87164ba362b029f657b8c, type: 3}
+      propertyPath: InterractMenu
+      value: 
+      objectReference: {fileID: 1080708694}
     - target: {fileID: 8882003552576801433, guid: ccbd6021e3b87164ba362b029f657b8c, type: 3}
       propertyPath: m_RootOrder
       value: 5

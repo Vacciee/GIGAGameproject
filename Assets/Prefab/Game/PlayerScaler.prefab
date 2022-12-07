@@ -10455,5 +10455,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   options: {fileID: 0}
+  InterractMenu: {fileID: 0}
   playSound: {fileID: 824148775474709785}
   playIdle: {fileID: 2799606134243253542}

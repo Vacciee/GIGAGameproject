@@ -211,11 +211,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &122433750 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 569652437108802065, guid: 8322ed677910f9d43bc73f3e741d898b, type: 3}
-  m_PrefabInstance: {fileID: 1608149644}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &259888256
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -855,7 +850,7 @@ MonoBehaviour:
   interractionMenu: {fileID: 628565793}
   closeMenu: {fileID: 713503350}
   planet: {fileID: 1035962250}
-  person: {fileID: 122433750}
+  person: {fileID: 1608149645}
 --- !u!4 &1223512878 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2056268913689762640, guid: c7fa2d202efac37428ea4a29acf1a67d, type: 3}
@@ -971,6 +966,54 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1148054014, guid: 8322ed677910f9d43bc73f3e741d898b, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1148054014, guid: 8322ed677910f9d43bc73f3e741d898b, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1148054014, guid: 8322ed677910f9d43bc73f3e741d898b, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 465.74
+      objectReference: {fileID: 0}
+    - target: {fileID: 1148054014, guid: 8322ed677910f9d43bc73f3e741d898b, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 126
+      objectReference: {fileID: 0}
+    - target: {fileID: 1148054014, guid: 8322ed677910f9d43bc73f3e741d898b, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 232.87
+      objectReference: {fileID: 0}
+    - target: {fileID: 1148054014, guid: 8322ed677910f9d43bc73f3e741d898b, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -567
+      objectReference: {fileID: 0}
+    - target: {fileID: 1348289997, guid: 8322ed677910f9d43bc73f3e741d898b, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1348289997, guid: 8322ed677910f9d43bc73f3e741d898b, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1348289997, guid: 8322ed677910f9d43bc73f3e741d898b, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 465.74
+      objectReference: {fileID: 0}
+    - target: {fileID: 1348289997, guid: 8322ed677910f9d43bc73f3e741d898b, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 126
+      objectReference: {fileID: 0}
+    - target: {fileID: 1348289997, guid: 8322ed677910f9d43bc73f3e741d898b, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 232.87
+      objectReference: {fileID: 0}
+    - target: {fileID: 1348289997, guid: 8322ed677910f9d43bc73f3e741d898b, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -441
+      objectReference: {fileID: 0}
     - target: {fileID: 1348289998, guid: 8322ed677910f9d43bc73f3e741d898b, type: 3}
       propertyPath: Kettu1_Final
       value: 
@@ -1099,6 +1142,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 310587582723252312, guid: 8322ed677910f9d43bc73f3e741d898b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 310587582723252313, guid: 8322ed677910f9d43bc73f3e741d898b, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 169.4771
+      objectReference: {fileID: 0}
+    - target: {fileID: 310587582723252313, guid: 8322ed677910f9d43bc73f3e741d898b, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -113.73859
+      objectReference: {fileID: 0}
     - target: {fileID: 310587582764416874, guid: 8322ed677910f9d43bc73f3e741d898b, type: 3}
       propertyPath: m_fontAsset
       value: 
@@ -1131,6 +1186,48 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -63
       objectReference: {fileID: 0}
+    - target: {fileID: 310587583547130572, guid: 8322ed677910f9d43bc73f3e741d898b, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 310587583547130572, guid: 8322ed677910f9d43bc73f3e741d898b, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 310587583547130572, guid: 8322ed677910f9d43bc73f3e741d898b, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 310587583547130572, guid: 8322ed677910f9d43bc73f3e741d898b, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 310587583547130572, guid: 8322ed677910f9d43bc73f3e741d898b, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 310587583547130572, guid: 8322ed677910f9d43bc73f3e741d898b, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 310587583547130573, guid: 8322ed677910f9d43bc73f3e741d898b, type: 3}
+      propertyPath: m_text
+      value: Venus is known for its exceptional brightness. It's volcanoes that dot
+        Venus's surface, the storms that rage in its atmosphere, and the surprising
+        feature that makes Venus outshine every planet or star in the night sky.
+      objectReference: {fileID: 0}
+    - target: {fileID: 310587583547130573, guid: 8322ed677910f9d43bc73f3e741d898b, type: 3}
+      propertyPath: m_fontStyle
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1623958712603201870, guid: 8322ed677910f9d43bc73f3e741d898b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2972028110213169038, guid: 8322ed677910f9d43bc73f3e741d898b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3126871601511944746, guid: 8322ed677910f9d43bc73f3e741d898b, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -1155,6 +1252,40 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -315
       objectReference: {fileID: 0}
+    - target: {fileID: 4227861560717724481, guid: 8322ed677910f9d43bc73f3e741d898b, type: 3}
+      propertyPath: m_text
+      value: Venus is hotter than Mercury,despite being further away from the Sun
+        and unlike the other planets in our solar system, Venus spins clockwise on
+        its axis!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4227861560717724481, guid: 8322ed677910f9d43bc73f3e741d898b, type: 3}
+      propertyPath: m_fontStyle
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6193688904338943188, guid: 8322ed677910f9d43bc73f3e741d898b, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6193688904338943188, guid: 8322ed677910f9d43bc73f3e741d898b, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6193688904338943188, guid: 8322ed677910f9d43bc73f3e741d898b, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6193688904338943188, guid: 8322ed677910f9d43bc73f3e741d898b, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6193688904338943188, guid: 8322ed677910f9d43bc73f3e741d898b, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6193688904338943188, guid: 8322ed677910f9d43bc73f3e741d898b, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6326690848076851698, guid: 8322ed677910f9d43bc73f3e741d898b, type: 3}
       propertyPath: m_fontAsset
       value: 
@@ -1165,6 +1296,11 @@ PrefabInstance:
       objectReference: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8322ed677910f9d43bc73f3e741d898b, type: 3}
+--- !u!1 &1608149645 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2972028110213169038, guid: 8322ed677910f9d43bc73f3e741d898b, type: 3}
+  m_PrefabInstance: {fileID: 1608149644}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1643753406
 GameObject:
   m_ObjectHideFlags: 0
@@ -1569,6 +1705,10 @@ PrefabInstance:
       propertyPath: options
       value: 
       objectReference: {fileID: 766566655}
+    - target: {fileID: 4168297406934761973, guid: ccbd6021e3b87164ba362b029f657b8c, type: 3}
+      propertyPath: InterractMenu
+      value: 
+      objectReference: {fileID: 628565793}
     - target: {fileID: 8882003552576801433, guid: ccbd6021e3b87164ba362b029f657b8c, type: 3}
       propertyPath: m_RootOrder
       value: 5

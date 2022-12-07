@@ -1169,6 +1169,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 310587582723252312, guid: 8322ed677910f9d43bc73f3e741d898b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 310587582723252313, guid: 8322ed677910f9d43bc73f3e741d898b, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 174.2184
+      objectReference: {fileID: 0}
+    - target: {fileID: 310587582723252313, guid: 8322ed677910f9d43bc73f3e741d898b, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -116.10919
+      objectReference: {fileID: 0}
     - target: {fileID: 310587582824686314, guid: 8322ed677910f9d43bc73f3e741d898b, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -1193,6 +1205,53 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -63
       objectReference: {fileID: 0}
+    - target: {fileID: 310587583547130572, guid: 8322ed677910f9d43bc73f3e741d898b, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 310587583547130572, guid: 8322ed677910f9d43bc73f3e741d898b, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 310587583547130572, guid: 8322ed677910f9d43bc73f3e741d898b, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 310587583547130572, guid: 8322ed677910f9d43bc73f3e741d898b, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 310587583547130572, guid: 8322ed677910f9d43bc73f3e741d898b, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 310587583547130572, guid: 8322ed677910f9d43bc73f3e741d898b, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 310587583547130573, guid: 8322ed677910f9d43bc73f3e741d898b, type: 3}
+      propertyPath: m_text
+      value: "Mars is the fourth planet from the Sun \u2013 a dusty, cold, desert
+        world with a very thin atmosphere. Mars is also a dynamic planet with seasons,
+        polar ice caps, canyons, extinct volcanoes, and evidence that it was even
+        more active in the past."
+      objectReference: {fileID: 0}
+    - target: {fileID: 310587583547130573, guid: 8322ed677910f9d43bc73f3e741d898b, type: 3}
+      propertyPath: m_fontStyle
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 310587583547130575, guid: 8322ed677910f9d43bc73f3e741d898b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1623958712603201870, guid: 8322ed677910f9d43bc73f3e741d898b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2972028110213169038, guid: 8322ed677910f9d43bc73f3e741d898b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3126871601511944746, guid: 8322ed677910f9d43bc73f3e741d898b, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -1216,6 +1275,39 @@ PrefabInstance:
     - target: {fileID: 3126871601511944746, guid: 8322ed677910f9d43bc73f3e741d898b, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -315
+      objectReference: {fileID: 0}
+    - target: {fileID: 4227861560717724481, guid: 8322ed677910f9d43bc73f3e741d898b, type: 3}
+      propertyPath: m_text
+      value: Fun fact, Space Trucker! Due to its color, Mars is also known as the
+        red planet! It also has 2 planets called Deimos and Phobos.
+      objectReference: {fileID: 0}
+    - target: {fileID: 4227861560717724481, guid: 8322ed677910f9d43bc73f3e741d898b, type: 3}
+      propertyPath: m_fontStyle
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6193688904338943188, guid: 8322ed677910f9d43bc73f3e741d898b, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6193688904338943188, guid: 8322ed677910f9d43bc73f3e741d898b, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6193688904338943188, guid: 8322ed677910f9d43bc73f3e741d898b, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6193688904338943188, guid: 8322ed677910f9d43bc73f3e741d898b, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6193688904338943188, guid: 8322ed677910f9d43bc73f3e741d898b, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6193688904338943188, guid: 8322ed677910f9d43bc73f3e741d898b, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8322ed677910f9d43bc73f3e741d898b, type: 3}
@@ -1597,6 +1689,10 @@ PrefabInstance:
       propertyPath: options
       value: 
       objectReference: {fileID: 12827089}
+    - target: {fileID: 4168297406934761973, guid: ccbd6021e3b87164ba362b029f657b8c, type: 3}
+      propertyPath: InterractMenu
+      value: 
+      objectReference: {fileID: 1080708694}
     - target: {fileID: 8882003552576801433, guid: ccbd6021e3b87164ba362b029f657b8c, type: 3}
       propertyPath: m_RootOrder
       value: 5

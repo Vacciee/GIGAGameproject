@@ -3,6 +3,7 @@ using UnityEngine;
 public class TriggerSFX : MonoBehaviour
 {
     public GameObject options;
+    public GameObject InterractMenu;
 
     [SerializeField]
     private AudioSource playSound;
@@ -22,7 +23,7 @@ public class TriggerSFX : MonoBehaviour
             playIdle.volume = 1;
         }
 
-        #region Show options menu by key input
+        #region Show options menu if settings is openend
         if (!options.activeInHierarchy)
         {
             playSound.mute = false;
@@ -30,6 +31,20 @@ public class TriggerSFX : MonoBehaviour
         }
 
         if (options.activeInHierarchy)
+        {
+            playSound.mute = true;
+            playIdle.mute = true;
+        }
+        #endregion
+
+        #region Show options menu if interraction Menu is open
+        if (!InterractMenu.activeInHierarchy)
+        {
+            playSound.mute = false;
+            playIdle.mute = false;
+        }
+
+        if (InterractMenu.activeInHierarchy)
         {
             playSound.mute = true;
             playIdle.mute = true;
