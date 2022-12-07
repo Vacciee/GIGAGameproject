@@ -22,6 +22,7 @@ public class QuizManager : MonoBehaviour
     public GameObject Truck;
     private TruckLoaderScript truckLoaderScript;
     public GameObject panelBar, QuizCanvas;
+    public GameManager gm;
     private ScoreScript scoreScript;
 
     public AudioSource audioSource;
@@ -175,8 +176,7 @@ public class QuizManager : MonoBehaviour
             truckLoaderScript.LoadNewItem();
             Mathf.RoundToInt(truckLoaderScript.fill += 100 / truckLoaderScript.maxFill);
         }
-        // // Updating progressbar
-        // pbScript.SetProgress(pbScript.progress);
+
         // popping up a check mark pop up
         correctAnimator.SetTrigger("OnCorrectAnswer");
         // Playing a sound
@@ -188,8 +188,9 @@ public class QuizManager : MonoBehaviour
             // Update score text!
             scoreText.text = (Mathf.RoundToInt(ScoreScript.score)).ToString();
             // Updating player score and planet cleared into GameManager
-
-
+            gm.scoreList[gm.currentPlanet - 1] = (Mathf.RoundToInt(ScoreScript.score));
+            gm.planetStatus[gm.currentPlanet - 1] = 1;
+            gm.Save();
             // Play a sound to celebrate!
             audioSource.PlayOneShot(quizComplete);
             // Kill the listeners so answer buttons stop working

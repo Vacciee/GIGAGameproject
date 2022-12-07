@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 using UnityEngine;
@@ -6,14 +7,17 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     #region Variables
-    public int cargo;
+    // public int cargo;
 
     public static GameManager manager;
     #endregion
 
-    [Range(0, 9)]
     public int currentPlanet;
-    public bool Planet1, Planet2, Planet3, Planet4, Planet5, Planet6, Planet7, Planet8, Planet9;
+    public List<int> planetStatus;
+    [NonSerialized]
+    public int Planet1, Planet2, Planet3, Planet4, Planet5, Planet6, Planet7, Planet8, Planet9;
+    public List<int> scoreList;
+    [NonSerialized]
     public int planet1Score, planet2Score, planet3Score, planet4Score, planet5Score, planet6Score, planet7Score, planet8Score, planet9Score, userVol;
 
     private void Awake()
@@ -37,14 +41,31 @@ public class GameManager : MonoBehaviour
             // Jos on olemassa manageri, niin silloin tama manageri on toinen manageri ja se on liikaa!
             // Joten tama manageri tuhotaan pois, jolloin ja vain se ensimmainen jaljelle. 
             Destroy(gameObject);
+            return;
         }
         #endregion
-    }
 
-    // private void Start() 
-    // {
-    //     Find.gameObject("PlayerScaler").Movement2.SetActive = true;
-    // }
+        scoreList.Add(planet1Score);
+        scoreList.Add(planet2Score);
+        scoreList.Add(planet3Score);
+        scoreList.Add(planet4Score);
+        scoreList.Add(planet5Score);
+        scoreList.Add(planet6Score);
+        scoreList.Add(planet7Score);
+        scoreList.Add(planet8Score);
+        scoreList.Add(planet9Score);
+
+        planetStatus.Add(Planet1);
+        planetStatus.Add(Planet2);
+        planetStatus.Add(Planet3);
+        planetStatus.Add(Planet4);
+        planetStatus.Add(Planet5);
+        planetStatus.Add(Planet6);
+        planetStatus.Add(Planet7);
+        planetStatus.Add(Planet8);
+        planetStatus.Add(Planet9);
+
+    }
 
     // Save game
     public void Save()
@@ -117,7 +138,7 @@ public class GameManager : MonoBehaviour
     class PlayerData
     {
         public int currentPlanet;
-        public bool Planet1, Planet2, Planet3, Planet4, Planet5, Planet6, Planet7, Planet8, Planet9;
+        public int Planet1, Planet2, Planet3, Planet4, Planet5, Planet6, Planet7, Planet8, Planet9;
         public int planet1Score, planet2Score, planet3Score, planet4Score, planet5Score, planet6Score, planet7Score, planet8Score, planet9Score, userVol;
     }
 }

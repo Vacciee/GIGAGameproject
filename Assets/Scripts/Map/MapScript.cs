@@ -15,18 +15,9 @@ public class MapScript : MonoBehaviour
     }
     private void Start()
     {
-        // Setting where the player spawns when the scene loads
+        // gm.CheckCurrentPlanet();
+        // // Setting where the player spawns when the scene loads
         playerPos.position = spawns[gm.currentPlanet].position;
+        Debug.Log("Loaded player in spawn " + gm.currentPlanet);
     }
-
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.CompareTag("Mercury"))
-        {
-            gm.currentPlanet = 1;
-            Debug.Log("Current planet set to Mercury");
-        }
-
-    }
-
 }
