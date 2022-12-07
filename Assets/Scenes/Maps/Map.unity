@@ -943,15 +943,11 @@ PrefabInstance:
     - target: {fileID: 495062288, guid: ccbd6021e3b87164ba362b029f657b8c, type: 3}
       propertyPath: gm
       value: 
-<<<<<<< Updated upstream
-      objectReference: {fileID: 0}
-=======
       objectReference: {fileID: 1969186233}
     - target: {fileID: 4168297406934761973, guid: ccbd6021e3b87164ba362b029f657b8c, type: 3}
       propertyPath: InterractMenu
       value: 
       objectReference: {fileID: 1397964852}
->>>>>>> Stashed changes
     - target: {fileID: 8882003552576801433, guid: ccbd6021e3b87164ba362b029f657b8c, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -2710,13 +2706,8 @@ GameObject:
   - component: {fileID: 1216149819}
   m_Layer: 0
   m_Name: saturn
-<<<<<<< Updated upstream
   m_TagString: Saturn
   m_Icon: {fileID: 0}
-=======
-  m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
->>>>>>> Stashed changes
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
