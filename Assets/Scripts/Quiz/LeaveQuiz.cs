@@ -9,4 +9,10 @@ public class LeaveQuiz : MonoBehaviour
         SceneManager.LoadScene("Map");
         Time.timeScale = 1;
     }
+
+    public void LeaveToMainMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
+        Time.timeScale = 1;
+    }
 }

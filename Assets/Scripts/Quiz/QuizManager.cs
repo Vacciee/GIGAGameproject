@@ -9,7 +9,7 @@ public class QuizManager : MonoBehaviour
     private List<Button> buttonsList;
     private List<TMP_Text> buttonTexts;
     public int currentQuestion;
-    private int newQuestion;
+    private int newQuestion, randomBackground;
     private int currentButton;
     public int answersToComplete = 10; // How many correct answers player needs to give
     public Button correctButton;
@@ -21,7 +21,8 @@ public class QuizManager : MonoBehaviour
 
     public GameObject Truck;
     private TruckLoaderScript truckLoaderScript;
-    public GameObject panelBar, QuizCanvas;
+    public GameObject panelBar, QuizCanvas, endScreen, bg1, bg2, bg3;
+    public GameObject[] endScreenBackgrounds;
     public GameManager gm;
     private ScoreScript scoreScript;
 
@@ -52,6 +53,10 @@ public class QuizManager : MonoBehaviour
 
         popUpComplete = GameObject.Find("PopUpComplete");
         popUpComplete.SetActive(false);
+        endScreen.SetActive(false);
+        bg1.SetActive(false);
+        bg2.SetActive(false);
+        bg3.SetActive(false);
 
         data = new List<Dictionary<string, object>>();
         // Filling the list with the stuff from file QuizQuestions.csv
@@ -81,7 +86,10 @@ public class QuizManager : MonoBehaviour
 
     void Update()
     {
-
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            ShowEndScreen();
+        }
 
 
     }
@@ -188,9 +196,9 @@ public class QuizManager : MonoBehaviour
             // Update score text!
             scoreText.text = (Mathf.RoundToInt(ScoreScript.score)).ToString();
             // Updating player score and planet cleared into GameManager
-            gm.scoreList[gm.currentPlanet - 1] = (Mathf.RoundToInt(ScoreScript.score));
-            gm.planetStatus[gm.currentPlanet - 1] = 1;
-            gm.Save();
+            // gm.scoreList[gm.currentPlanet - 1] = (Mathf.RoundToInt(ScoreScript.score));
+            // gm.planetStatus[gm.currentPlanet - 1] = 1;
+            // gm.Save();
             // Play a sound to celebrate!
             audioSource.PlayOneShot(quizComplete);
             // Kill the listeners so answer buttons stop working
@@ -231,5 +239,13 @@ public class QuizManager : MonoBehaviour
         }
         currentQuestion = newQuestion;
         print("currentQuestion has been set to question " + currentQuestion + ".");
+    }
+
+    void ShowEndScreen()
+    {
+        endScreen.SetActive(true);
+        randomBackground = UnityEngine.Random.Range(0, endScreenBackgrounds.Length);
+        Debug.Log("Rolled a random background with the index of " + randomBackground);
+        endScreenBackgrounds[randomBackground].SetActive(true);
     }
 }
