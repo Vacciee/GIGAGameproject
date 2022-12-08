@@ -441,8 +441,24 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3416938531220772053, guid: 993de37937c43a5488af0c4193e93a49, type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3416938531220772053, guid: 993de37937c43a5488af0c4193e93a49, type: 3}
       propertyPath: m_PresetInfoIsWorld
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3416938531220772053, guid: 993de37937c43a5488af0c4193e93a49, type: 3}
+      propertyPath: m_MatchWidthOrHeight
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3416938531220772053, guid: 993de37937c43a5488af0c4193e93a49, type: 3}
+      propertyPath: m_ReferenceResolution.x
+      value: 1920
+      objectReference: {fileID: 0}
+    - target: {fileID: 3416938531220772053, guid: 993de37937c43a5488af0c4193e93a49, type: 3}
+      propertyPath: m_ReferenceResolution.y
+      value: 1080
       objectReference: {fileID: 0}
     - target: {fileID: 3416938532908730944, guid: 993de37937c43a5488af0c4193e93a49, type: 3}
       propertyPath: m_Colors.m_PressedColor.b
@@ -611,6 +627,22 @@ PrefabInstance:
     - target: {fileID: 5075080363442466860, guid: 993de37937c43a5488af0c4193e93a49, type: 3}
       propertyPath: m_Name
       value: Options
+      objectReference: {fileID: 0}
+    - target: {fileID: 5075080363442466862, guid: 993de37937c43a5488af0c4193e93a49, type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5075080363442466862, guid: 993de37937c43a5488af0c4193e93a49, type: 3}
+      propertyPath: m_MatchWidthOrHeight
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5075080363442466862, guid: 993de37937c43a5488af0c4193e93a49, type: 3}
+      propertyPath: m_ReferenceResolution.x
+      value: 1920
+      objectReference: {fileID: 0}
+    - target: {fileID: 5075080363442466862, guid: 993de37937c43a5488af0c4193e93a49, type: 3}
+      propertyPath: m_ReferenceResolution.y
+      value: 1080
       objectReference: {fileID: 0}
     - target: {fileID: 5075080363634362134, guid: 993de37937c43a5488af0c4193e93a49, type: 3}
       propertyPath: m_AnchorMax.x

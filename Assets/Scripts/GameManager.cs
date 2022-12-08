@@ -23,7 +23,7 @@ public class GameManager : MonoBehaviour
     private void Awake()
     {
         Application.targetFrameRate = 60;
-        Screen.SetResolution(1920, 1080, true, 60);
+        //Screen.SetResolution(1920, 1080, true, 60);
         #region Check managers
 
         Debug.Log("Checking & destroying other GameManagers...");
