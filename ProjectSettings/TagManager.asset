@@ -18,6 +18,7 @@ TagManager:
   - Trigger2L
   - Trigger2R
   - Proxy
+  - planetExitArea
   layers:
   - Default
   - TransparentFX

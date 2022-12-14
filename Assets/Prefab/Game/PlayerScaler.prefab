@@ -10291,6 +10291,7 @@ GameObject:
   - component: {fileID: 5633605218481521606}
   - component: {fileID: 495062288}
   - component: {fileID: 4168297406934761973}
+  - component: {fileID: 6824239879675528283}
   m_Layer: 0
   m_Name: PlayerScaler
   m_TagString: Player
@@ -10442,6 +10443,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movement: {fileID: 5633605218481521606}
+  gm: {fileID: 0}
 --- !u!114 &4168297406934761973
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10458,3 +10460,17 @@ MonoBehaviour:
   InterractMenu: {fileID: 0}
   playSound: {fileID: 824148775474709785}
   playIdle: {fileID: 2799606134243253542}
+--- !u!114 &6824239879675528283
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8882003552576801435}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a6aeba1ab05d2343afbffcae9133ef6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PlanetExitArea: {fileID: 0}
+  SpawnArea: {fileID: 0}
