@@ -246,11 +246,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 433f4e48560e6764e8d4d80ea7a3159c, type: 3}
---- !u!1 &131290746 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1782744547094352748, guid: 433f4e48560e6764e8d4d80ea7a3159c, type: 3}
-  m_PrefabInstance: {fileID: 131290745}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &259888256
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -635,7 +630,7 @@ GameObject:
   - component: {fileID: 971957131}
   m_Layer: 0
   m_Name: background
-  m_TagString: Untagged
+  m_TagString: planetExitArea
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1820,14 +1815,6 @@ PrefabInstance:
       propertyPath: InterractMenu
       value: 
       objectReference: {fileID: 1080708694}
-    - target: {fileID: 6824239879675528283, guid: ccbd6021e3b87164ba362b029f657b8c, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6824239879675528283, guid: ccbd6021e3b87164ba362b029f657b8c, type: 3}
-      propertyPath: PlanetExitArea
-      value: 
-      objectReference: {fileID: 131290746}
     - target: {fileID: 8882003552576801433, guid: ccbd6021e3b87164ba362b029f657b8c, type: 3}
       propertyPath: m_RootOrder
       value: 4
