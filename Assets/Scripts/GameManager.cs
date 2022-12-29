@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class GameManager : MonoBehaviour
 {
@@ -22,6 +23,7 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
+
         Application.targetFrameRate = 60;
         //Screen.SetResolution(1920, 1080, true, 60);
         #region Check managers
@@ -71,9 +73,9 @@ public class GameManager : MonoBehaviour
     public void Save()
     {
         Debug.Log("Game Saved");
-        BinaryFormatter bf = new BinaryFormatter();
+        BinaryFormatter bf = new();
         FileStream file = File.Create(Application.persistentDataPath + "/playerInfo.dat");
-        PlayerData playerData = new PlayerData();
+        PlayerData playerData = new();
         playerData.currentPlanet = currentPlanet;
         playerData.Planet1 = Planet1;
         playerData.Planet2 = Planet2;
@@ -106,7 +108,7 @@ public class GameManager : MonoBehaviour
         if (File.Exists(Application.persistentDataPath + "/playerInfo.dat"))
         {
             Debug.Log("Game Loaded");
-            BinaryFormatter bf = new BinaryFormatter();
+            BinaryFormatter bf = new();
             FileStream file = File.Open(Application.persistentDataPath + "/playerInfo.dat", FileMode.Open);
             PlayerData playerData = (PlayerData)bf.Deserialize(file);
             file.Close();

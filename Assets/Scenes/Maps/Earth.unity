@@ -185,6 +185,72 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 569652437391327265, guid: 8322ed677910f9d43bc73f3e741d898b, type: 3}
   m_PrefabInstance: {fileID: 1608149644}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &131290745
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1782744547094352748, guid: 433f4e48560e6764e8d4d80ea7a3159c, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 1782744547094352748, guid: 433f4e48560e6764e8d4d80ea7a3159c, type: 3}
+      propertyPath: m_Name
+      value: ExitPlanetTrigger
+      objectReference: {fileID: 0}
+    - target: {fileID: 1782744547094352753, guid: 433f4e48560e6764e8d4d80ea7a3159c, type: 3}
+      propertyPath: m_RootOrder
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 1782744547094352753, guid: 433f4e48560e6764e8d4d80ea7a3159c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.1148597
+      objectReference: {fileID: 0}
+    - target: {fileID: 1782744547094352753, guid: 433f4e48560e6764e8d4d80ea7a3159c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -5.37
+      objectReference: {fileID: 0}
+    - target: {fileID: 1782744547094352753, guid: 433f4e48560e6764e8d4d80ea7a3159c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1782744547094352753, guid: 433f4e48560e6764e8d4d80ea7a3159c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1782744547094352753, guid: 433f4e48560e6764e8d4d80ea7a3159c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1782744547094352753, guid: 433f4e48560e6764e8d4d80ea7a3159c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1782744547094352753, guid: 433f4e48560e6764e8d4d80ea7a3159c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1782744547094352753, guid: 433f4e48560e6764e8d4d80ea7a3159c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1782744547094352753, guid: 433f4e48560e6764e8d4d80ea7a3159c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1782744547094352753, guid: 433f4e48560e6764e8d4d80ea7a3159c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 433f4e48560e6764e8d4d80ea7a3159c, type: 3}
+--- !u!1 &131290746 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1782744547094352748, guid: 433f4e48560e6764e8d4d80ea7a3159c, type: 3}
+  m_PrefabInstance: {fileID: 131290745}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &259888256
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -403,7 +469,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &577343717
 PrefabInstance:
@@ -807,7 +873,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!58 &1035962253
 CircleCollider2D:
@@ -1149,7 +1215,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 310587582673441268, guid: 8322ed677910f9d43bc73f3e741d898b, type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 310587582673441268, guid: 8322ed677910f9d43bc73f3e741d898b, type: 3}
       propertyPath: m_AnchorMax.x
@@ -1754,9 +1820,17 @@ PrefabInstance:
       propertyPath: InterractMenu
       value: 
       objectReference: {fileID: 1080708694}
+    - target: {fileID: 6824239879675528283, guid: ccbd6021e3b87164ba362b029f657b8c, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6824239879675528283, guid: ccbd6021e3b87164ba362b029f657b8c, type: 3}
+      propertyPath: PlanetExitArea
+      value: 
+      objectReference: {fileID: 131290746}
     - target: {fileID: 8882003552576801433, guid: ccbd6021e3b87164ba362b029f657b8c, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8882003552576801433, guid: ccbd6021e3b87164ba362b029f657b8c, type: 3}
       propertyPath: m_LocalPosition.x

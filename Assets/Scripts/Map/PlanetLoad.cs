@@ -6,7 +6,7 @@ public class PlanetLoad : MonoBehaviour
 {
     #region Variables;
     [Header("Desired scene name")]
-    [Tooltip("Name the scene name exactly how its written in scene folder!")] public string scenePath;
+    [Tooltip("Name the scene name exactly how it's written in the scene folder!")] public string scenePath;
     #endregion
 
     #region Scene Loading

@@ -7,6 +7,8 @@ public class Movement2 : MonoBehaviour
     Vector3 mousePosition;
     Vector2 position = new Vector2(0f, 0f);
 
+
+
     void Update()
     {
         mousePosition = Input.mousePosition;

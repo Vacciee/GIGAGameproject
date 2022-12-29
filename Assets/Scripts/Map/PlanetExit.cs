@@ -7,28 +7,35 @@ public class PlanetExit : MonoBehaviour
 {
 
     [SerializeField]
-    GameObject PlanetExitArea;
+    GameObject SpawnArea = null;
 
-    [SerializeField]
-    GameObject SpawnArea;
+    static Transform SpawnAreaLocation;
 
-    Transform SpawnAreaLocation;
+  
+    public GameObject [] SpawnAreaList = new GameObject[5];
+
+    private void Awake()
+    {
+        DontDestroyOnLoad(this);    
+    }
     void Start()
     {
-        SpawnAreaLocation = SpawnArea.transform;
+        SpawnAreaLocation = SpawnAreaList[0].transform;
 
-        PlanetExitArea.GetComponent<GameObject>();
+
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision != null && collision.CompareTag("planetExitArea")) {
+            if (SpawnArea != null)
+            {
+                transform.position = SpawnArea.transform.position;
+                SceneManager.LoadScene("Map");
 
-   transform.position = SpawnArea.transform.position;
-            SceneManager.LoadScene("Map");
-         
 
-            Debug.Log("Exiting planet");
+                Debug.Log("Exiting planet");
+            }
         }
     }
 
