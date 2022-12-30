@@ -10,6 +10,7 @@ public class TriggerSFX : MonoBehaviour
     [SerializeField]
     private AudioSource playIdle;
 
+
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Mouse0))
