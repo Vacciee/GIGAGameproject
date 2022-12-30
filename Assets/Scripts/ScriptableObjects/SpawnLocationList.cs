@@ -7,11 +7,12 @@ public class SpawnLocationList : ScriptableObject
 {
 
     public GameObject location;
-    // Singleton, call from any script
+    // You can call this from any script:
     public static SpawnLocationList instance;
 
     // fill in inspector
     public Transform [] locations;
+
 
     public string myString;
 

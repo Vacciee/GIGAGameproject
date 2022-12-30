@@ -10,23 +10,8 @@ public class SpawnLocationManager : MonoBehaviour
     private SpawnLocationList spawnLocationList;
 
     public GameObject player;
+    public string currentScene;
     public static string previousScene;
-
-    //void OnEnable()
-    //{
-    //    SceneManager.sceneLoaded += OnSceneLoaded;
-    //}
-
-    //void OnDisable()
-    //{
-    //    SceneManager.sceneLoaded -= OnSceneLoaded;
-    //}
-
-    //void OnSceneLoaded(Scene scene, LoadSceneMode mode)
-    //{
-    //    player = GameObject.FindWithTag("Player");
-    //    Debug.Log("---- Player tag found!");
-    //}
 
     GameObject SpawnArea;
   
@@ -34,42 +19,52 @@ public class SpawnLocationManager : MonoBehaviour
 
     public Transform [] SpawnAreaList = new Transform[1];
 
-    private void Awake()
-    {
-      //DontDestroyOnLoad(this);
-    }
+
     void Start()
     {
-        Debug.Log(spawnLocationList.myString);
+        currentScene = SceneManager.GetActiveScene().name;
 
         Debug.Log("Coming from the scene : " + previousScene);
-        previousScene = SceneManager.GetActiveScene().name;
-        Debug.Log("Scene now is : " + previousScene);
 
-       // SpawnAreaLocation = spawnLocationList.location.transform;
+        Debug.Log("Scene now is : " + currentScene);
 
-    //  SpawnAreaLocation = SpawnAreaList[0].transform;
 
-        if (previousScene == "Earth")
+        // Nämä määrittävät, minne space shuttle spawnaa kun tulee ulos planeetasta.
+        // Vie Player kohdalle, johon haluat sen spawnautuvan ja kopioi Inspectorista oikeelta ylhäältä kolme pistettä Transform - > Copy -> Position (ei World)
+
+        if (currentScene == "Map" && previousScene == "Earth")
         {
-  //  player.transform.position = SpawnAreaLocation.position;
+            player.transform.position = new Vector3(10, -3, 0);
+        }
+        if (currentScene == "Map" && previousScene == "Venus")
+        {
+            player.transform.position = new Vector3(4, -3.8f, 0f);
+        }
+        if (currentScene == "Map" && previousScene == "Mercury")
+        {
+            player.transform.position = new Vector3(-3.10f, -4.4f, 0); // <-- Pastee tähän Playerin position.
         }
 
-        //transform.position = SpawnAreaLocation.position;
+        // jne.. 
 
-        //Debug.Log("Spawn area location is: " + SpawnAreaLocation.name);
+        // + joka planeetan scenessä pitää raahata Playerin inspectoriin Spawn Location Manageriin Spawn Location List-kohdalle "SpawnLocation"-scriptableObject,
+        // joka löytyy Scripts > ScriptableObjects-folderista
+
+
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision != null && collision.CompareTag("planetExitArea")) {
+
+            previousScene = SceneManager.GetActiveScene().name;
             //if (SpawnArea != null)
             //{
              //  player.transform.position = SpawnArea.transform.position;
                 SceneManager.LoadScene("Map");
 
 
-                Debug.Log("Exiting planet");
+            Debug.Log("Exiting planet");
          //   }
         }
     }
